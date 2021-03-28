@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer01HtmlBasico</title>
+</head>
+<body>
+    
+    <p>
+        <h1>Este es el primer ejercicio de Html de la Materia</h1>
+    </p>
+    <p>
+        <h2>A continuacion vamos a jugar un poco</h2>
+    </p>
+
+    <nav>
+        <h3>Grupo de Elementos de Navegacion</h3>
+            <ul>
+                <li>
+                    <a href="https://www.google.com.ar">Google</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com.ar">Youtube</a>
+                </li>
+                <li>
+                    <a href="https://www.mercadolibre.com.ar">Mercado Libre</a>
+                </li>
+            </ul>
+    </nav>
+
+    <hr>
+    <div>
+        <a href="./ejer01MismaVentana.html" style="padding-right: 15px;">Enlace a otra pagina en la misma pestaña</a>
+        <a href="./ejer01NuevaVentana.html" target="_blank" style="padding-right: 15px;">Enlace a otra pagina en una nueva ventana</a>
+        <a href="#anclaje">Ancla a otro punto de esta pagina</a>
+    </div>
+    <hr>
+
+    <main>
+        <p>
+            <h1>Prueguntas a Responder en el ejercicio 1</h1>
+        </p>
+        <p>
+            A continuacion paso a enumerar las preguntas que debemos responder en el ejercicio y luego seran resueltas punto por punto
+        </p>
+        <section>
+            <h3>Preguntas:</h3>
+            <ul>
+                <li>Dar un par de ejemplos de uso de etiquetas Meta</li>
+                <li>Nombrar al menos 2 atributos aplicables a la etiqueta HTML</li>
+                <li>¿Como se relaciona un header http con la etiqueta head de HTML?</li>
+                <li>¿Que es UTF8?</li>
+                <li>¿Que atributo HTML sirve para aplicar estilo, a que etiqueta es aplicable?</li>
+                <li>¿Donde se indica que un enlace debe ubicar el documento en una nueva pestaña?</li>
+                <li>Explicar cuando usarían etiquetas semánticas y con que propósito.</li>
+                <li>¿Que atributos de estilo básicos aplicarían a una tabla? Explicar.</li>
+                <li>¿Que diferencia existe entre la etiqueta body de un documento HTML y el body del
+                    protocolo HTTP?</li>
+                <li>¿Que atributos marcan la agrupación de celdas de una tabla?. ¿A que etiquetas se aplican?</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Respuestas:</h3>
+            <ul>
+                <li>
+                    <p>
+                        - Meta charset: Sirve para codificar los caracteres y evitar errores si la fuente no fue previamente definida en el 
+                        header del protocolo HTTP.
+                    </p>
+                    <p>
+                        - Meta description: Aqui podemos describir brevemente el contenido de la página web. 
+                        Esta información se muestra como snippet (una síntesis en dos líneas del tema de una página que aparece bajo la URL) 
+                        en los buscadores, por lo que se recomienda cuidar su redacción. 
+                    </p>
+                </li>
+                <li> 
+                    <p>
+                        - Lang: Indica en lenguaje del texto                    
+                    </p>
+                    <p>
+                        - Id: Codigo unico identificador de la etiqueta
+                    </p>
+                    <p>
+                        - Class: Establece la clase Css que se aplica a los elementos
+                    </p>
+                </li>
+                <li>
+                    El contenido de Head provee información general (metadatos) acerca del documento, incluyendo su título 
+                    y enlaces a scripts y hojas de estilos. Estos metadatos son precisamente los que viajan en el header del request del 
+                    protocolo Html para que el servidor pueda devolver el documento con todos sus componente y su formatos correcto.                    
+                </li><br>
+                <li>
+                    Utf 8 es un formato de codificacion que permite codificar miles de caracteres de Unicode para que sean entendibles por la maquina.
+                </li><br>
+                <li>
+                    El atributo que sirve para aplicar estilo es "Style". y se puede aplicar en cualquier etiqueta del body.
+                </li><br>
+                <li>
+                    Se debe indicar dentro de la etiqueta "a", mas precisamente en el atributo "target" con el valor "_blank".
+                </li><br>
+                <li>
+                    Las etiquetas semanticas se utilizan cuando necesitamos
+                    marcar los limites de distintos tipos de contenido. Su proposito es el de delimitar el contenido del documento, sin tener nada
+                    que ver con la estructura sintactica del mismo. Delimitar el contenido puede ayudar a ser mas organizado a la hora de codificar la pagina web
+                    y ademas permite aplicar estilos de manera mas ordenada.
+                </li><br>
+                <li>
+                    <p>
+                        - Border: Establecer un borde visible y de algun color
+                    </p>
+                    <p>
+                        - Padding: Esto lo haria para dar espacio entre cada columna y fila
+                    </p>
+                    <p>
+                        Text-align: Y esto seria para alinear todos los datos en la tabla.
+                    </p>
+                </li><br>
+                <li>
+                    El elemento body de HTML representa el contenido de un documento HTML. En cambio el body del protocolo HTTP representa las 
+                    variables u archivos que los requerimientos o las repuestas envian el uno al otro. De hecho una respuesta a una peticion
+                    para ingresar a una web es la url de esa web, que cuando se ejecuta el navegador lee el HTML y imprime en pantalla su body.
+                </li><br>
+                <li>
+                    Los atributos que marcan la agrupacion de celdas en un tabla son colspan y rowspan y se aplican a la etiqueta 
+                    td(celda con datos) y th(celda con titulo).
+                </li><br>
+            </ul>
+        </section>
+    </main>
+
+    <br><hr>
+
+    <section>
+        <h1>Seccion de Imagenes</h1>
+        <h3>Imagen insertada en tamaño real:</h3>
+        <div>
+            <img src="./imagen.jpg" alt="">
+        </div>
+        <h3>La misma imagen, "Paisaje", con tamaño 250x256, con distintos tamaños de width:</h3>
+        <div>   
+            <img src="./imagen.jpg" alt="" width="8%" height="256">
+            <img src="./imagen.jpg" alt="" width="14%" height="256">
+            <img src="./imagen.jpg" alt="" width="18%" height="256">
+            <img src="./imagen.jpg" alt="" width="24%" height="256">
+            <img src="./imagen.jpg" alt="" width="28%" height="256">
+        </div>
+    </section>
+
+    <br><hr>
+
+    <section>
+        <div>
+            <h1>Seccion de Video</h1>
+            <video src="./Paisajes Naturales de Canadá.mp4" type="video/mp4" width="600" height="100%" controls autoplay loop></video>
+        </div>
+    </section>
+
+    <br><hr>
+
+    <section>
+        <div>
+            <h1>Anclajes</h1>
+            <h3 id="anclaje">Punto de Anclaje</h3>
+        </div>
+    </section>
+
+    <br><hr>
+
+    <section>
+        <div>
+            <h1>Datos del Alumno</h1>
+            <h3>Matias Gabriel Bonet - Legajo: 26032 - TUP - UTN</h3>
+            <a href="mailto:matias.g.bonet@gmail.com">matias.g.bonet@gmail.com</a>
+        </div>
+    </section>
+
+    <br><br>
+
+</body>
+</html>
