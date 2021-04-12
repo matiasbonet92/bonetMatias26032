@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer03 Formularios</title>
+</head>
+<body>
+    <section>
+        <p>
+            <h1>Formulario para entradas sin validacion</h1>
+        </p>
+        <form action="./respuestaFormulario.html" method="get" target="_blank">
+            <ul>
+                <li>
+                    <label style="font-weight: bold;" for="apellido">Apellido:</label><br>
+                    <input type="text" name="apellido" id="apellido" autofocus="autofocus"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="pass">Contraseña:</label><br>
+                    <input type="password" name="pass" id="pass"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="oculto">Oculto:</label><br>
+                    <input type="hidden" name="oculto" id="oculto"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="deshabilitado">Campo deshabilitado:</label><br>
+                    <input type="text" name="deshabilitado" id="deshabilitado" disabled value="valor deshabilitado"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="readonly">Campo deshabilitado:</label><br>
+                    <input type="text" name="readonly" id="redonly" readonly value="valorSoloLectura"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="deportes">Practica deportes:</label><br>
+                    <input type="checkbox" value="si" id="deportes" name="deportes"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="musica">Practica Musica:</label><br>
+                    <input type="checkbox" value="si" id="musica" name="musica"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="arte">Practica Pintura Artistica:</label><br>
+                    <input type="checkbox" value="si" id="arte" name="arte"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="sexo">Sexo:</label><br>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" value="masc" id="masculino" name="sexo" checked="checked">
+                    <label for="femenino">Femenino</label>
+                    <input type="radio" value="fem" id="femenino" name="sexo"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="estudios">Estudios cursados:</label><br>
+                    <select name="estudios" id="estudios">
+                        <option value="primaria" selected="selected">Primaria</option>
+                        <option value="secundario">Sacundaria</option>
+                        <option value="terciario">Terciario</option>
+                        <option value="universitario">Universitario</option>
+                        <option value="posgrado">Posgrado</option>
+                    </select><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="fecha">Fecha y Hora:</label><br>
+                    <input type="date" id="fecha" name="fecha">
+                    <input type="time" id="fecha" name="hora"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="color">Color:</label><br>
+                    <input type="color" id="color" name="color"><br>
+                </li>
+                <li>
+                    <input type="submit" value="Enviar formulario sin validacion" name="envio"><br>
+                </li>
+                <li>
+                    <input type="reset" value="Reset a valores predeterminados" name="reset">
+                </li>
+            </ul>
+        </form>
+    </section>
+
+    <section>
+        <p>
+            <h1>Formulario para entradas con validacion</h1>
+        </p>
+        <form action="./respuestaFormulario.html" method="get" target="_blank">
+            <ul>
+                <li>
+                    <label style="font-weight: bold;" for="comentario">Comentario (validacion por requerido):</label><br>
+                    <input type="text" name="comentario" required id="comentario"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="email">Email con doble validacion (x@x y required):</label><br>
+                    <input type="email" name="email" placeholder="texto@texto" required id="email"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="entero">Numero entero limitado (validacion por tipo numerico y cotas):</label><br>
+                    <input type="number" min="1" max="5" name="numeroEntero" id="entero"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="decimal">Numero decimal:</label><br>
+                    <input type="number" min="0" max="9" step="0.1" name="numDecimal" id="decimal"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="url">URL (validacion por requerido, escribir http://):</label><br>
+                    <input type="url" name="sitio" placeholder="http://xxx" required id="url"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="pattern1">Pattern de validacion:</label><br>
+                    <input type="text" pattern="[a-z]{2}[0-9]{3}" title="2 letras y 3 numeros" name="patt1" required=required id="pattern1"><br>
+                </li>
+                <li>
+                    <label style="font-weight: bold;" for="pattern2">Pattern de validacion:</label><br>
+                    <input type="text" pattern="[(][+][5][4][)][ ][1][1][ ][0-9]{8}" title="11 numeros del 0 al 9" name="patt2" placeholder="(+54) 11 44445555" required=required id="pattern2"><br>
+                </li>
+                <li>
+                    <input type="submit" value="Enviar formulario sin validacion" name="envio"><br>
+                </li>
+                <li>
+                    <input type="reset" value="Reset a valores predeterminados" name="reset">
+                </li>
+            </ul>
+        </form>
+    </section>
+
+
+</body>
+</html>
