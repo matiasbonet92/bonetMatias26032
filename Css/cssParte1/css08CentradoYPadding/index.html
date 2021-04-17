@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css08CentradoyPadding</title>
+    <style>
+        div.estiloTexto{
+            background-color: lightblue;
+            margin: auto;
+            width: 50%;
+        }
+
+        div.estiloTextoPadding{
+            background-color: lightgreen;
+            margin: auto;
+            width: 50%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        div.estiloTextoPaddingBox{
+            background-color: lightgrey;
+            margin: auto;
+            width: 50%;
+            padding-left: 10%;
+            padding-right: 10%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Los siguientes elementos tienen un ancho del 50% de la ventana</h1>
+    <div class="estiloTexto">
+        <span>Texto en interior</span><br>
+        <span>Texto en interior</span><br>
+        <span>Texto en interior</span><br>
+        <span>Texto en interior</span><br>
+        <span>Texto en interior</span><br>
+        <span>Texto en interior</span>
+    </div>
+    <div class="estiloTextoPadding">
+        <span>Texto en interior con padding y sin box_sizing</span><br>
+        <span>Texto en interior con padding y sin box_sizing</span><br>
+        <span>Texto en interior con padding y sin box_sizing</span><br>
+        <span>Texto en interior con padding y sin box_sizing</span><br>
+        <span>Texto en interior con padding y sin box_sizing</span>
+    </div>
+    <div class="estiloTextoPaddingBox">
+        <span>Texto en interior con padding y con box_sizing</span><br>
+        <span>Texto en interior con padding y con box_sizing</span><br>
+        <span>Texto en interior con padding y con box_sizing</span><br>
+        <span>Texto en interior con padding y con box_sizing</span><br>
+        <span>Texto en interior con padding y con box_sizing</span>
+    </div>
+
+    <br><br>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+</body>
+</html>

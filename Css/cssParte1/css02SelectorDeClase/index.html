@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css02SelectorDeClase</title>
+    <style>
+        p{
+            margin-bottom: 60px;
+        }
+
+        p.claseDestacado , span.claseDestacado{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p.claseAcotacion{
+            font-size: 18px;
+            color: blue;
+            font-style: italic;
+            text-align: center;
+            border-style: solid;
+            border-width: thin;
+            border-color: blue;
+            margin: auto;
+            padding: 10px;
+            line-height: 50px;
+        }
+
+        p.claseAyuda{
+            font-size: 18px;
+            color: orange;
+            padding-right: 40px;
+            padding-left: 40px;
+            border-style: solid;
+            border-color: orange;
+            border-width: thin;
+            width: 50%;
+            text-align: center;
+            font-style: italic;
+        }
+
+        p.claseContenidoComun{
+            font-size: 14px;
+        }
+
+        p#idUnico{
+            width: 25%;
+            border-color: red;
+            border-width: thin;
+            border-style: solid;
+            font-size: 13px;
+            font-style: italic;
+            text-align: center;
+            color: red;
+        }
+
+        img.imagenA150{
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            Este parrafo contiene un grupo de palabras delimitado por una etiqueta "span". El comienzo es aqui: <span class="claseDestacado">grupo de palabras destacadas con el estilo claseDestacado</span>
+        </p>
+        <p class="claseAcotacion">
+            Este parrafo toma el estilo definido en la class="claseAcotacion" jkjksajkasak saksajkasjkasjsa jkasjkasjaksjsa kjsaksjkajksa jksaaksjsakjsakjsa kjsakajskasjsakjsa kjajkasjsakjsaksaj jajajajjajajajajjajajajajjajajajajajjajajajjajajjajajaja
+        </p>
+        <p class="claseDestacado">
+            Este parrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseDestacado"
+        </p>
+        <p class="claseAyuda">
+            Este parrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseAyuda"
+        </p>
+        <p class="claseContenidoComun">
+            Este parrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseContenidoComun"
+        </p>
+        <p id="idUnico">
+            Parrafo dormateado por un estilo particular definido en el style del documento para un parrafo especifico id="idUnico"
+        </p>
+    </section>
+
+    <section>
+        <h1>Todas las imagenes con class="imagenA150" en esta pagina se encuentran limitadas al 50% del ancho del viewport mas alla de su tamaño real en pixeles:</h1>
+        <img src="./paisaje.jpg" alt="" class="imagenA150">
+    </section>
+
+    <br><br>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+</body>
+</html>

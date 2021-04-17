@@ -9,7 +9,7 @@
 <body>
     <div>
         <h1>Indice de ejercicios de la materia Laboratorio 3</h1>
-    </div>
+    </div><br>
     <div>
         <ul>
             <li>
