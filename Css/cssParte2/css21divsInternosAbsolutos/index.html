@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css21divsInternosAbsolutos</title>
+    <style>
+        html , body{
+            height: 100%;
+            margin: 0%;
+        }
+
+        .divContenedor{
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            background-color:lightblue;
+        }
+
+        h1 , h3{
+            margin: 0%;
+        }
+
+        .contInterno1{
+            position: absolute;
+            top: 28%;
+            left: 10%;
+            width: 15%;
+            height: 300px;
+            background-color: darkgreen;
+            overflow: auto;
+        }
+
+        .contInterno2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40%;
+            height: 300px;
+            background-color: lightgreen;
+            overflow: auto;
+        }
+
+        img{
+            width: 170px;
+            height: 200px;
+        }
+
+        .contInterno3{
+            position: absolute;
+            top: 15%;
+            left: 42%;
+            width: 24%;
+            height: 300px;
+            background-color: darkgrey;
+            opacity: 0.6;
+            z-index: auto;
+            overflow: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="divContenedor">
+        <h3>Estructura de posicionamiento absoluto pero adaptable a la resolucion de pantalla</h3>
+        <div class="contInterno1">
+            <h1>Contenedor Interno 1.</h1>
+            <span>asdasd sadsad sadsad ads sadad sad asd ad asd asd a d sa daads sadasdas dasas sadad</span>
+        </div>
+        <div class="contInterno2">
+            <h1>Contenedor Interno 2.</h1>
+            <img src="./imagen.jpg" alt="" class="img">
+            <img src="./imagen.jpg" alt="" class="img">
+            <img src="./imagen.jpg" alt="" class="img">
+        </div>
+        <div class="contInterno3">
+            <h1>Contenedor Interno 3.</h1>
+            <span>asdasd sadsad sadsad ads sadad sad asd ad asd asd a d sa daads sadasdas dasas sadad</span>
+        </div>
+    </div>
+    <br><br>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+</body>
+</html>

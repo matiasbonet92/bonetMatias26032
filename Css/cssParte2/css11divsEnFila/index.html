@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css11divsEnFila</title>
+    <style>
+        .divGeneral{
+            margin: auto;
+            width: 80%;
+            background-color:lightblue;
+            overflow: auto;
+        }
+
+        div.div1 , div.div3 , div.div5{
+            float: left;
+            margin: 10px;
+            border: solid 2px black;
+            border-radius: 5%;
+            width: 20%;
+            height: 80px;
+            background: linear-gradient(180deg,blue,white,yellow);
+            box-shadow: 16px 8px 2px grey;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        div.div2 , div.div4{
+            float: left;
+            margin: 10px;
+            border: solid 2px black;
+            border-radius: 5%;
+            width: 20%;
+            height: 80px;
+            background: radial-gradient(blue,white,yellow);
+            box-shadow: 16px 8px 2px grey;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="divGeneral">
+        <div class="div1">
+            <p>Texto en Div 1</p>
+        </div>
+        <div class="div2">
+            <p>Texto en Div 2</p>
+        </div>
+        <div class="div3">
+            <p>Texto en Div 3</p>
+        </div>
+        <div class="div4">
+            <p>Texto en Div 4</p>
+        </div>
+        <div class="div5">
+            <p>Texto en Div 5</p>
+        </div>
+    </div>
+    <br><br>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+</body>
+</html>

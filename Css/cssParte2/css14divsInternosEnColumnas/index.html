@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css14divsInternosEnColumnas</title>
+    <style>
+
+        html , body{
+            margin: 0%;
+        }
+
+        h1{
+            margin: 0%;
+        }
+
+        .divContenedor{
+            margin: auto;
+            width: 80%;
+            overflow: auto;
+        }
+
+        .div1 , .div6{
+            float: left;
+            margin: 5px;
+            width: 30%;
+            height: 450px;
+            background-color: lightblue;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            padding-top: 5%;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .div2 , .div3 , .div4 , .div5{
+            float: left;
+            margin: 5px;
+            width: 30%;
+            height: 150px;
+            background-color: lightblue;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            padding-left: 5%;
+            padding-right: 5%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="divContenedor">
+        <h1>Encolumnado sin tablas</h1>
+        <div class="div1">
+            <p>1- El concepto de paisaje se utiliza de manera diferente por varios campos de estudio, 
+                aunque todos los usos del término llevan implícita la existencia de un sujeto.</p>
+            <img src="./imagen.jpg" alt="" class="img">
+        </div>
+        <div class="div2">
+            <p>2- El concepto de paisaje se utiliza de manera diferente por varios campos de estudio, 
+                aunque todos los usos del término llevan implícita la existencia de un sujeto.</p>
+        </div>
+        <div class="div3">
+            <p>3- El concepto de paisaje se utiliza de manera diferente por varios campos de estudio, 
+                aunque todos los usos del término llevan implícita la existencia de un sujeto.</p>
+        </div>
+        <div class="div4">
+            <p>4- El concepto de paisaje se utiliza de manera diferente por varios campos de estudio, 
+                aunque todos los usos del término llevan implícita la existencia de un sujeto.</p>
+        </div>
+        <div class="div5">
+            <p>5- El concepto de paisaje se utiliza de manera diferente por varios campos de estudio, 
+                aunque todos los usos del término llevan implícita la existencia de un sujeto.</p>
+        </div>
+        <div class="div6">
+            <p>6- El concepto de paisaje se utiliza de manera diferente por varios campos de estudio, 
+                aunque todos los usos del término llevan implícita la existencia de un sujeto.</p>
+            <img src="./imagen.jpg" alt="" class="img">
+        </div>
+    </div>
+    <br><br>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssdivsInternosRelativos</title>
+    <style>
+        html , body{
+            background-color: blue;
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .divContenedor{
+            margin: auto;
+            width: 80%;
+            background-color:white;
+            overflow: auto;
+        }
+
+        h1 {
+            margin: 0%;
+        }
+
+        .contClase1{
+            background-color: green;
+            color: black;
+            font-size: 28px;
+            width: 80%;
+            height: 50px;
+            padding-left: 10px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 0%;
+        }
+
+        .contClase2{
+            background-color: yellow;
+            color: black;
+            font-size: 25px;
+            width: 50%;
+            height: auto;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+            justify-content: left;
+            align-items: center;
+            margin-top: 40px;
+            margin-left: 20%;
+        }
+
+        .contClase3{
+            background-color: orange;
+            color: black;
+            font-size: 25px;
+            width: 50%;
+            height: 150px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+            overflow: auto;
+            justify-content: left;
+            align-items: center;
+            margin-top: 30px;
+            margin-left: 30%;
+        }
+
+        .contModal{
+            position: fixed;
+            width: 50%;
+            height: 270px;
+            top: 20%;
+            left: 20%;
+            opacity: 0.5;
+            background-color: darkblue;
+            color: white;
+            font-size: 18px;
+            padding-left: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            visibility: visible; 
+            z-index: 10;
+            justify-content: left;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="divContenedor">
+        <h1>Contenedores Relativos</h1>
+        <div class="contClase1">
+            <p>Contenedor Relativo Clase 1</p>
+        </div>
+        <div class="contClase1">
+            <p>Contenedor Relativo Clase 1</p>
+        </div>
+        <div class="contClase2">
+            <span>Contenedor Relativo Clase 2</span>
+        </div>
+        <div class="contClase2">
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span>
+        </div>
+        <div class="contClase2">
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span>
+        </div>
+        <div class="contClase3">
+            <span>Contenedor Relativo Clase 3</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>
+            <span>texto texto texto texto</span><br>        
+        </div>
+        <div class="contClase2">
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span>
+        </div>
+        <div class="contClase2">
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span><br>
+            <span>Contenedor Relativo Clase 2</span>
+        </div>
+        <div class="contModal">
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span><br>
+            <span>Contenedor Modal</span>
+        </div>
+    </div>
+    <br><br>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+</body>
+</html>
