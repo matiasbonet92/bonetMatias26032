@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css22CentradoVerticalCajaFlex</title>
+    <style>
+
+        html, body {
+            margin: 0%;
+            padding: 0%;
+            height: 100%;
+        }
+
+        .divContenedor{
+            margin: auto;
+            width: 90%;
+            height: 90%;
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: auto;
+        }
+
+        .divContenedor img{
+            max-width: 100%;
+            max-height: 100%;
+            width: 350px;
+            height: 250px;
+        }
+
+        footer{
+            margin: auto;
+            width: 90%;
+            height: 42px;
+            align-content: center;
+            background-color: lightsalmon;
+            padding-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="divContenedor">
+        <img src="./paisaje.jpg" alt="">
+        <img src="./paisaje.jpg" alt="">
+        <img src="./paisaje.jpg" alt="">
+    </div>
+    <footer>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </footer>
+</body>
+</html>

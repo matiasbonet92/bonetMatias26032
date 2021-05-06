@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css30layoutBasico</title>
+    <style>
+
+        body , html{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        header{
+            margin: auto;
+            width: 90%;
+            height:15%;
+            background-color:grey;
+            font-size:25px;
+            font-weight: bold;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+
+        .divInterno{
+            margin: auto;
+            width: 90%;
+            height: 75%;
+        }
+
+        .divMenu{
+            margin: auto;
+            width: 20%;
+            height:100%;
+            background-color:orange;
+            font-size:25px;
+            font-weight: bold;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 30px;
+            float: left;
+        }
+
+        #menu ul{
+            list-style: none;
+            width: 100%;
+            position: relative;
+            right: 39px;
+        }
+
+        #menu ul li{
+            background-color: grey;
+            color: black;
+            font-family: sans-serif;
+            font-weight: normal;
+            font-size: 15px;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        #menu ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #menu ul li:hover{
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        .divParrafo{
+            margin: auto;
+            width: 80%;
+            height:100%;
+            background-color:lightgray;
+            font-size:18px;
+            font-weight: normal;
+            text-align: left;
+            box-sizing: border-box;
+            padding: 30px;
+            overflow: auto;
+        }
+
+        footer{
+            margin: auto;
+            width: 90%;
+            height:10%;
+            background-color:grey;
+            font-size:20px;
+            font-weight: bold;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        footer a{
+            font-size: 18px;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        Titulo principal de la pagina
+    </header>
+    <div class="divInterno">
+        <div class="divMenu">
+            <h2>Menu</h2>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="/Html/">HTML</a>
+                    </li>
+                    <li>
+                        <a href="/Css/">CSS</a>
+                    </li>
+                    <li>
+                        <a href="/Jscript/">JSCRIPT</a>
+                    </li>
+                    <li>
+                        <a href="/Php/">PHP</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="divParrafo">
+            <p>Estas sugerencias responden a la necesidad que algunos universitarios tienen de conocer la forma adecuada de presentar un trabajo. Para ello, han de seguir unas pautas formales básicas, como titular el trabajo, identificar su autoría, paginar, hacer un índice, estructurar el trabajo (con introducción, nudo y conclusiones) y citar las fuentes utilizadas. Además, cabe seguir los pasos comentados con anterioridad, consistentes en reflexionar, hacer después un esquema y luego desarrollar las ideas con claridad.
+
+                El trabajo se puede presentar encuadernado con canutillo, método que se realiza de forma económica en cualquier reprografía, recordando colocar al final del trabajo una hoja en blanco de cortesía. El título general constará en letras destacadas; por ejemplo, en negritas, cursivas y mayúsculas (que se acentuarán con normalidad) de tamaño 20. Si se hace así, sobra subrayarlo, pues es redundante y no es necesario (salvo que se use máquina de escribir). El título ha de condensar de forma sintética el trabajo que se presenta. Si se pone en letras mayúsculas.
+                
+                Debajo del título, en menor tamaño, ha de constar la autoría del trabajo: nombre y apellidos de quien haya participado en él. Además se puede añadir otros datos complementarios del autor, como el correo electrónico, el curso académico o el grupo donde está matriculado. Ello facilitará localizar la atribución del trabajo en caso de que se traspapele por accidente. También es aconsejable añadir una hoja de salva, que es una hoja en blanco entre el título y el índice.
+                
+                El índice se coloca delante del trabajo, aunque normalmente es lo último que se redacta al acabar la investigación. Un índice requiere que consten los capítulos con sus correspondientes números de página, y las imágenes, gráficos o figuras que tenga. Un índice puede seguir el propio esquema previo para después estructurar el escrito; es decir, en él han de constar los puntos estructurales de la obra.
+                
+                Sobre la presentación del trabajo en sí, remito a las sugerencias ya propuestas en las recomendaciones para presentar textos breves, con las correspondientes adecuaciones que se consideren convenientes para presentar un texto extenso. Como imprimir en folios blancos por las dos caras. En este caso, cabe ubicar la paginación centrada en la parte inferior, para evitar desequilibrios en el aspecto general de la obra. El título ha de carecer de paginación.
+                
+                También se puede colocar en la parte superior de todas las páginas del trabajo el nombre del autor y el título del trabajo, o el título de cada capítulo. Es una pauta que siguen numerosas ediciones actualmente.
+                
+                Al comenzar cada capítulo se han de incluir varios espacios en blanco, a modo de cortesía, antes de escribir el título. Del mismo modo, cabe separar un espacio entre dicho título y el texto. Es recomendable, por motivos de claridad, numerar cada capítulo, así como numerar cada uno de los apartados y subapartados de cada capítulo. Cada epígrafe se destacará de una forma sencilla, por ejemplo en cursivas y negritas (no hace falta subrayar ni poner punto final).
+                
+                Para exponer un texto poco extenso, por ejemplo de unos veinte folios, sería suficiente con ofrecer una estructura sencilla, que conste de introducción, desarrollo del tema y conclusiones. Dicha estructura básica es indispensable para que quien lo lea entienda de qué trata. La introducción resumirá el tema del trabajo -contando el orden en que se van a exponer los temas-, incluirá la metodología que se ha seguido, el propósito del estudio, sus aportaciones e incluso puede mencionar un breve anticipo de las conclusiones. Cuando se llegue a las mismas, se podrá dar más rienda suelta a la imaginación que en el resto del trabajo.
+                
+                Un trabajo extenso, por ejemplo de ochenta folios, requerirá aumentar los apartados mencionados. Entre ellos podría sumarse una metodología, un estado de la cuestión, unos antecedentes y unas consecuencias…, y se cerrará siempre con la bibliografía. Esta se compilará siguiendo el orden alfabético de los apellidos, como se explica al final de esta guía. También, la bibliografía se puede presentar dividiéndola por temas, como estilan algunos libros. Pero este sistema tiende a ser poco frecuente, acaso porque sea poco práctico al no reunir por el mismo orden los títulos.
+                
+                Los cuadros, tablas, imágenes, esquemas, gráficos, etcétera, constarán todos juntos al final del trabajo, en el apéndice. Han de llevar un título. Para localizarlos con facilidad es práctico encabezarlas todas por la palabra Figura con un número, y colocarlas por orden. Por ejemplo: “A esos colores se refería el autor cuando aludía a la tonalidad de la letra miniada (vid. Figura 7)”. Al final del trabajo, en el apartado titulado Apéndice, constaría en séptimo lugar la Figura 7: Letra miniada.
+                
+                Se usarán corchetes para señalar la omisión de una parte del texto en medio de una cita. También se usarán corchetes para añadir cualquier comentario que no pertenezca a la cita textual.
+                
+                Las citas textuales, si son breves, se añadirán en el texto entre comillas. Si la cita excede de cuatro líneas, se sangrará el texto y se pondrá con tamaño menor y sin comillas, a continuación del texto, en párrafo aparte.
+                
+                Las notas al pie de página son muy útiles para hacer cualquier inciso, plantear una duda, mencionar un agradecimiento o añadir lo que se considere oportuno. También sirven para citar fuentes primarias (documentos que en el caso de los historiadores básicamente proceden de archivos y hemerotecas) y secundarias (revistas y libros procedentes de bibliotecas). Las notas se colocarán en el texto antes del signo de puntuación, con la frase a la que acompañen, como en este caso: [1].
+                
+                Para citar fuentes primarias, cuando se cite un archivo o una biblioteca por primera vez se desarrollará su nombre completo más el nombre entre paréntesis. Con posterioridad, sólo se citarán dichas siglas, de la siguiente forma: Archivo Histórico Nacional (de España AHNE), Biblioteca Nacional de España (BNE). Para citar referencias de archivo, se ha de citar la signatura que se ofrezca en el depósito documental donde se encuentre el documento, más el folio de donde proceda la cita (“fol.” o “fols.”, «f.» o «ff.»). Si no tiene foliación, se indicará (“s/f” o “sin foliar”).
+                
+                En caso de citar voces de diccionario, enciclopedia y otros repertorios generales, no es obligatorio anotar el número de páginas. Estos se citan incluyendo la voz en negrita y el título de la obra y la edición (voz escribiente, Diccionario de la Real Academia Española, XX ed.). Pero normalmente se tiende a incluir después los datos de edición del repertorio que se cite. En cualquier caso, se ha de seguir siempre el mismo criterio.
+                
+                Tampoco hace falta citar la página en la que se encuentra una ley. Las leyes se citan con las referencias propias, con sus artículos (o títulos si es antiguo) o leyes, o los datos correspondientes, por ejemplo:
+                
+                Libro IV, título XXV, ley XII, del Tomo segundo de las Leyes de Recopilación, que contiene los libros tercero y quarto, Madrid, Imprenta de Pedro Marín, 1777.
+                
+                Por último, en un trabajo extenso, se cita la bibliografía. Véanse a continuación los sistemas básicos de cita, el estilo Harvard y el sistema de notas al pie de página.</p>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <footer>
+        Pie de Pagina
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </footer>
+</body>
+</html>

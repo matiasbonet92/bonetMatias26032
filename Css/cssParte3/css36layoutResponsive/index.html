@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css36layoutResponsive</title>
+    <style>
+        html , body{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        header{
+            margin: auto;
+            width: 90%;
+            height: 12%;
+            background-color: #0A4169;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            box-sizing: border-box;
+            padding-top: 15px;
+        }
+
+        #menu ul{
+            list-style: none;
+            margin: auto;
+            padding: 0%;
+            width: 90%;
+            height: 10%;
+        }
+
+        #menu ul li a{
+            margin: auto;
+            text-decoration: none;
+            width: 25%;
+            height: 50px;
+            background-color: #555859;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            box-sizing: border-box;
+            padding-top: 15px;
+            float: left;
+        }
+
+        #menu ul li a:hover{
+            background-color: #B8BBBE;
+            cursor: pointer;
+        }
+
+        .contInterno{
+            margin: auto;
+            width: 90%;
+            height: 70%;
+            background-color: #3DACFD;
+            overflow: auto;
+        }
+
+        .col1, .col2, .col3, .col4, .col5{
+            margin: auto;
+            width: 20%;
+            height: auto;
+            float: left;
+            background-color: gray;
+        }
+
+        .col2 img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .col5 img{
+            width: 65%;
+            height: 65%;
+        }
+
+
+        footer{
+            margin: auto;
+            width: 90%;
+            height: 10%;
+            background-color: #0A4169;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            box-sizing: border-box;
+            padding-top: 15px;
+        }
+
+
+        @media (max-width:600px){
+
+            #menu ul{
+                list-style: none;
+                margin: auto;
+                padding: 0%;
+                width: 90%;
+                height: 10%;
+            }
+
+            #menu ul li a{
+                margin: auto;
+                text-decoration: none;
+                width: 100%;
+                height: 50px;
+                background-color: #555859;
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                box-sizing: border-box;
+                padding-top: 15px;
+            }
+
+            #menu ul li a:hover{
+                background-color: #B8BBBE;
+                cursor: pointer;
+            }
+
+            .contInterno{
+                margin: auto;
+                width: 90%;
+                height: 280px;
+                background-color: #3DACFD;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .col1, .col2, .col3, .col4, .col5{
+                margin: auto;
+                width: 40%;
+                height: auto;
+                background-color: gray;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        Titulo principal de la Pagina
+    </header>
+    <nav id="menu">
+        <ul>
+            <li>
+                <a href="/Html/">HTML</a>
+            </li>
+            <li>
+                <a href="/Css/">CSS</a>
+            </li>
+            <li>
+                <a href="/Jscript/">JSCRIPT</a>
+            </li>
+            <li>
+                <a href="/Php/">PHP</a>
+            </li>
+        </ul>
+    </nav>
+    <div style="clear: both;"></div>
+    <div class="contInterno">
+        <div class="col1">
+            <p>Los cuadros, tablas, imágenes, esquemas, gráficos, etcétera, constarán todos juntos al final del trabajo, en el apéndice. Han de llevar un título. Para localizarlos con facilidad es práctico encabezarlas todas por la palabra Figura con un número, y colocarlas por orden. Por ejemplo: “A esos colores se refería el autor cuando aludía a la tonalidad de la letra miniada (vid. Figura 7)”. Al final del trabajo, en el apartado titulado Apéndice, constaría en séptimo lugar la Figura 7: Letra miniada. Al final del trabajo, en el apartado titulado Apéndice, constaría en séptimo lugar la Figura 7: Letra miniada.</p>
+        </div>
+        <div class="col2">
+            <p>Los cuadros, tablas, imágenes, esquemas, gráficos, etcétera, constarán todos juntos al final del trabajo, en el apéndice.</p>
+            <img src="./paisaje.jpg" alt="" style="transform: rotateZ(10deg);">
+            <p>Para localizarlos con facilidad es práctico encabezarlas todas por la palabra Figura con un número, y colocarlas por orden.</p>
+        </div>
+        <div class="col3">
+            <p>Los cuadros, tablas, imágenes, esquemas, gráficos, etcétera, constarán todos juntos al final del trabajo, en el apéndice. Han de llevar un título. Para localizarlos con facilidad es práctico encabezarlas todas por la palabra Figura con un número, y colocarlas por orden. Por ejemplo: “A esos colores se refería el autor cuando aludía a la tonalidad de la letra miniada (vid. Figura 7)”. Al final del trabajo, en el apartado titulado Apéndice, constaría en séptimo lugar la Figura 7: Letra miniada. </p>
+        </div>
+        <div class="col4">
+            <p>Los cuadros, tablas, imágenes, esquemas, gráficos, etcétera, constarán todos juntos al final del trabajo, en el apéndice. Han de llevar un título. Para localizarlos con facilidad es práctico encabezarlas todas por la palabra Figura con un número, y colocarlas por orden. Por ejemplo: “A esos colores se refería el autor cuando aludía a la tonalidad de la letra miniada (vid. Figura 7)”. Al final del trabajo, en el apartado titulado Apéndice, constaría en séptimo lugar la Figura 7: Letra miniada. Al final del trabajo, en el apartado titulado Apéndice, constaría en séptimo lugar la Figura 7: Letra miniada. </p>
+        </div>
+        <div class="col5">
+            <p>Los cuadros, tablas, imágenes, esquemas, gráficos, etcétera, constarán todos juntos al final del trabajo, en el apéndice. Han de llevar un título. Para localizarlos con facilidad es práctico encabezarlas todas por la palabra Figura con un número, y colocarlas por orden.</p> 
+            <img src="./balloons.png" alt="" style="transform: translateX(-50%) ;">
+            <p>FIN</p>
+        </div>
+    </div>
+    <footer id="footer">
+        Pie de Pagina
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </footer>
+</body>
+</html>

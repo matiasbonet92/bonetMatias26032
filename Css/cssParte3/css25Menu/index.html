@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css25Menu</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body , html{
+            margin: auto;
+            height: 100%;
+        }
+
+        #menu ul{
+            list-style: none;
+        }
+
+        #menu ul li{
+            background-color: #1E466E;
+            color: white;
+            position: relative;
+            float: left;
+            padding: 10px;
+            font-family: sans-serif;
+            font-weight: normal;
+        }
+
+        #menu ul a{
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+
+        #menu ul ul{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+        #menu ul ul li{
+            float: none;
+            width: 150px;
+        }
+
+        #menu ul ul a{
+            padding: 10px;
+        }
+
+        #menu ul li:hover{
+            background-color: #5D8FC1;
+        }
+
+        #menu ul li:hover ul{
+            display: block;
+            background-color: #5D8FC1;
+        }
+
+        .divInterno{
+            margin: auto;
+            width: 90%;
+            height: 80%;
+        }
+
+        footer{
+            margin: auto;
+            width: 90%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li>
+                <a href="/Html/">HTML</a>
+                <ul>
+                    <li>
+                        <a href="/Html/ejer02Tablas/index.html">TABLAS</a>
+                    </li>
+                    <li>
+                        <a href="/Html/ejer03Formularios/index.html">FORMULARIOS</a>
+                    </li>
+                    <li>
+                        <a href="/Html/ejer05IFrame/index.html">IFRAME</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/Css/">CSS</a>
+                <ul>
+                    <li>
+                        <a href="/Css/cssParte1/css01StyleEnHeader/">STYLE EN EL HEADER</a>
+                    </li>
+                    <li>
+                        <a href="/Css/cssParte1/css02SelectorDeClase/">SELECTORES DE CLASE</a>
+                    </li>
+                    <li>
+                        <a href="/Css/cssParte1/css03StyleEnFile/">STYLE EN EL FILE</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/Jscript/">JSCRIPT</a>
+            </li>
+            <li>
+                <a href="/Especiales/">ESPECIALES</a>
+            </li>
+            <li>
+                <a href="/Php/">PHP</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="divInterno" style="clear: both;"></div>
+    <footer>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </footer>
+</body>
+</html>

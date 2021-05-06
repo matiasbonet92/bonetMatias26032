@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css29tablasRWD</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        html , body{
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            background-color: #2A5568;
+        }
+
+        header{
+            width: 100%;
+            height: 10%;
+            background-color: #2A5568;
+        }
+
+        header h1{
+            text-align: center;
+            color: white;
+        }
+
+        table.tabla{
+            border-spacing: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        table.tabla thead tr, table.tabla tbody{
+            display: block;
+        }
+
+        table.tabla tbody{
+            height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        table.tabla thead [campo-dato="id"],
+        table.tabla thead [campo-dato="nick"],
+        table.tabla thead [campo-dato="mail"],
+        table.tabla thead [campo-dato="web"],
+        table.tabla thead [campo-dato="twitter"],
+        table.tabla thead [campo-dato="skype"] {
+            width: 800px;
+            height: 10%;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            background-color: orange;
+            font-size: 18px;
+            color: white;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        table.tabla tbody [campo-dato="id"],
+        table.tabla tbody [campo-dato="nick"],
+        table.tabla tbody [campo-dato="mail"],
+        table.tabla tbody [campo-dato="web"],
+        table.tabla tbody [campo-dato="twitter"],
+        table.tabla tbody [campo-dato="skype"] {
+            width: 18%;
+            height: 10%;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            border-left: none;
+            border-right: none;
+            font-size: 15px;
+            color: black;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        table.tabla tbody tr:nth-child(odd){
+            background-color: lightblue;
+        }
+
+        .divEspacio{
+            margin: auto;
+            width: 100%;
+            height: 40%;
+        }
+
+        footer{
+            padding-left: 10px;
+        }
+
+        @media (max-width:1200px){
+            header{
+                margin-bottom: 30px;
+            }
+
+            table.tabla thead [campo-dato="web"],
+            table.tabla thead [campo-dato="twitter"],
+            table.tabla thead [campo-dato="skype"] {
+                display:none
+            }
+
+            table.tabla thead [campo-dato="id"],
+            table.tabla thead [campo-dato="nick"],
+            table.tabla thead [campo-dato="mail"]{
+                width: 400px;
+            }
+
+            table.tabla tbody [campo-dato="web"],
+            table.tabla tbody [campo-dato="twitter"],
+            table.tabla tbody [campo-dato="skype"] {
+                display:none
+            }
+
+            table.tabla tbody [campo-dato="id"],
+            table.tabla tbody [campo-dato="nick"],
+            table.tabla tbody [campo-dato="mail"]{
+                width: 400px;
+                text-align: center;
+            }
+
+            .divEspacio{
+                margin: auto;
+                width: 100%;
+                height: 35%;
+            }
+
+            footer{
+                padding-left: 10px;
+            }
+        }
+
+        @media (max-width:800px){
+            header{
+                margin-bottom: 60px;
+            }
+
+            table.tabla thead [campo-dato="mail"],
+            table.tabla thead [campo-dato="web"],
+            table.tabla thead [campo-dato="twitter"],
+            table.tabla thead [campo-dato="skype"] {
+                display:none
+            }
+
+            table.tabla thead [campo-dato="id"],
+            table.tabla thead [campo-dato="nick"]{
+                width: -100%;
+            }
+
+            table.tabla tbody [campo-dato="mail"],
+            table.tabla tbody [campo-dato="web"],
+            table.tabla tbody [campo-dato="twitter"],
+            table.tabla tbody [campo-dato="skype"] {
+                display:none
+            }
+
+            table.tabla tbody [campo-dato="id"],
+            table.tabla tbody [campo-dato="nick"]{
+                width: 400px;
+            }
+
+            .divEspacio{
+                margin: auto;
+                width: 100%;
+                height: 30%;
+            }
+
+            footer{
+                padding-left: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RWD (Responsive Web Design) TABLE: Thead fijo y Tbody scrolleable</h1>
+    </header>
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th campo-dato="id">Id</th>
+                <th campo-dato="nick">Nick</th>
+                <th campo-dato="mail">Mail</th>
+                <th campo-dato="web">Web</th>
+                <th campo-dato="twitter">Twitter</th>
+                <th campo-dato="skype">Skype</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td campo-dato="id">1</td>
+                <td campo-dato="nick">Matias</td>
+                <td campo-dato="mail">matias@gmail.com</td>
+                <td campo-dato="web">http://matias.com.ar</td>
+                <td campo-dato="twitter">@matias</td>
+                <td campo-dato="skype">matias@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">2</td>
+                <td campo-dato="nick">Maira</td>
+                <td campo-dato="mail">maira@gmail.com</td>
+                <td campo-dato="web">http://maira.com</td>
+                <td campo-dato="twitter">@maira</td>
+                <td campo-dato="skype">maira@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">3</td>
+                <td campo-dato="nick">Florencia</td>
+                <td campo-dato="mail">florencia@gmail.com</td>
+                <td campo-dato="web">http://florencia.org</td>
+                <td campo-dato="twitter">@florencia</td>
+                <td campo-dato="skype">florencia@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">4</td>
+                <td campo-dato="nick">Ezequiel</td>
+                <td campo-dato="mail">ezequiel@gmail.com</td>
+                <td campo-dato="web">http://ezequiel.com.ar</td>
+                <td campo-dato="twitter">@ezequiel</td>
+                <td campo-dato="skype">ezequiel@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">5</td>
+                <td campo-dato="nick">Daniel</td>
+                <td campo-dato="mail">daniel@gmail.com</td>
+                <td campo-dato="web">http://daniel.com</td>
+                <td campo-dato="twitter">@daniel</td>
+                <td campo-dato="skype">daniel@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">6</td>
+                <td campo-dato="nick">Monica</td>
+                <td campo-dato="mail">monica@gmail.com</td>
+                <td campo-dato="web">http://monica.com.ar</td>
+                <td campo-dato="twitter">@monica</td>
+                <td campo-dato="skype">monica@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">7</td>
+                <td campo-dato="nick">Pilar</td>
+                <td campo-dato="mail">pilar@gmail.com</td>
+                <td campo-dato="web">http://pilar.com.ar</td>
+                <td campo-dato="twitter">@pilar</td>
+                <td campo-dato="skype">pilar@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">8</td>
+                <td campo-dato="nick">Karen</td>
+                <td campo-dato="mail">karen@gmail.com</td>
+                <td campo-dato="web">http://karen.com.ar</td>
+                <td campo-dato="twitter">@karen</td>
+                <td campo-dato="skype">karen@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">9</td>
+                <td campo-dato="nick">Marcos</td>
+                <td campo-dato="mail">marcos@gmail.com</td>
+                <td campo-dato="web">http://marcos.com.ar</td>
+                <td campo-dato="twitter">@marcos</td>
+                <td campo-dato="skype">marcos@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">10</td>
+                <td campo-dato="nick">Irene</td>
+                <td campo-dato="mail">irene@gmail.com</td>
+                <td campo-dato="web">http://irene.com.ar</td>
+                <td campo-dato="twitter">@irene</td>
+                <td campo-dato="skype">irene@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">11</td>
+                <td campo-dato="nick">Diego</td>
+                <td campo-dato="mail">diego@gmail.com</td>
+                <td campo-dato="web">http://diego.com.ar</td>
+                <td campo-dato="twitter">@diego</td>
+                <td campo-dato="skype">diego@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">12</td>
+                <td campo-dato="nick">Alejandro</td>
+                <td campo-dato="mail">alejandro@gmail.com</td>
+                <td campo-dato="web">http://alejandro.com.ar</td>
+                <td campo-dato="twitter">@alejandro</td>
+                <td campo-dato="skype">alejandro@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">13</td>
+                <td campo-dato="nick">Pablo</td>
+                <td campo-dato="mail">pablo@gmail.com</td>
+                <td campo-dato="web">http://pablo.com.ar</td>
+                <td campo-dato="twitter">@pablo</td>
+                <td campo-dato="skype">pablo@gmail.com</td>
+            </tr>
+            <tr>
+                <td campo-dato="id">14</td>
+                <td campo-dato="nick">Martin</td>
+                <td campo-dato="mail">martin@gmail.com</td>
+                <td campo-dato="web">http://martin.com.ar</td>
+                <td campo-dato="twitter">@martin</td>
+                <td campo-dato="skype">martin@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="divEspacio"></div>
+    <footer>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Css/index.html">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </footer>
+</body>
+</html>
