@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js03variablesSimples</title>
+</head>
+<body>
+    <h1>Carga de Variables Globales</h1>
+    <script>
+        var z = undefined;
+        var a = 1;
+        var b = "1";
+        var c = 2;
+        var d = prompt('Ingrese el valor a cargar en la variable global:');
+        var sum = a + b;
+        var sum2 = a + c;
+
+        document.write("<h2>Variable <span style='color:blue;'>z</span> inicializada desde el programa:" + z + " </h2>");
+        document.write("<h2>Tipo de <span style='color:blue;'>z</span>:" + typeof z + "</h2>");
+        document.write("<h2>Variable <span style='color:blue;'>a</span> inicializada desde el programa:" + a + " </h2>");
+        document.write("<h2>Tipo de <span style='color:blue;'>a</span>:" + typeof a + "</h2>");
+        document.write("<h2>Variable <span style='color:blue;'>b</span> inicializada desde el programa:" + b + " </h2>");
+        document.write("<h2>Tipo de <span style='color:blue;'>b</span>:" + typeof b + "</h2>");
+        document.write("<h2>Variable <span style='color:blue;'>c</span> inicializada desde el programa:" + c + " </h2>");
+        document.write("<h2>Tipo de <span style='color:blue;'>c</span>:" + typeof c + "</h2>");
+        document.write("<h2><span style='color:blue;'>a+b</span>:" + sum + " </h2>");
+        document.write("<h2>Tipo de <span style='color:blue;'>a+b</span>:" + typeof sum + "</h2>");
+        document.write("<h2><span style='color:blue;'>a+c</span>:" + sum2 + " </h2>");
+        document.write("<h2>Tipo de <span style='color:blue;'>a+c</span>:" + typeof sum2 + "</h2>");
+        document.write("<h2>Variable <span style='color:blue;'>d</span> ingresada por teclado:" + d + " </h2>");
+        document.write("<h2>Tipo de <span style='color:blue;'>d</span>:" + typeof d + "</h2>");
+    </script>
+
+    <br><br>
+
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="../index.php">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+
+</body>
+</html>

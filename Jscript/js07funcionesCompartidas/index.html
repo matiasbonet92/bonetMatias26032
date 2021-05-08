@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js07funcionesCompartidas</title>
+    <style>
+        html,body{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .contenedor{
+            margin: auto;
+            margin-top: 40px;
+            width: 50%;
+            height: 70%;
+            background-color: blue;
+        }
+
+        .display{
+            width: 100%;
+            height: 6%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display input{
+            width: 80%;
+            height: 100%;
+            margin-top: 50px;
+            text-align: right;
+        }
+
+        .btnNum{
+            margin: auto;
+            width: 81%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin-top: 23px;
+            padding-bottom: 23px;
+        }
+
+        .btnNum .tablaNum {
+            width: 100%;
+            height: 100%;
+        }
+
+        .btnNum .tablaNum tr td button{
+            width: 90%;
+            margin-left: 10px;
+        }
+
+        .btnAccion{
+            margin: auto;
+            width: 81%;
+            height: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: grey;
+        }
+
+        .btnAccion .tablaBotones {
+            width: 100%;
+            height: 100%;
+        }
+
+        .btnAccion .tablaBotones tr td button{
+            width: 80%;
+            height: 70%;
+            margin-left: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="display">
+            <input type="text" name="" id="dato" value="0" >
+        </div>
+        <div class="btnNum">
+            <table class="tablaNum">
+                <tr>
+                    <td><button id="1">1</button></td>
+                    <td><button id="2">2</button></td>
+                    <td><button id="3">3</button></td>
+                </tr>
+                <tr>
+                    <td><button id="4">4</button></td>
+                    <td><button id="5">5</button></td>
+                    <td><button id="6">6</button></td>
+                </tr>
+                <tr>
+                    <td><button id="7">7</button></td>
+                    <td><button id="8">8</button></td>
+                    <td><button id="9">9</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="btnAccion">
+            <table class="tablaBotones">
+                <tr>
+                    <td><button id="mas">+</button></td>
+                    <td><button id="acum">Mostrar Acumulador</button></td>
+                </tr>
+                <tr>
+                    <td><button id="borrarAcum">Borrar Acumulador</button></td>
+                    <td><button id="borrarDisplay">Borrar Display</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+        var acum = 0;
+        
+        /*Botonera de numeros*/
+        document.getElementById("1").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "1"; } 
+            else {document.getElementById("dato").value = num.concat("1");}
+        }
+
+        document.getElementById("2").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "2"; } 
+            else {document.getElementById("dato").value = num.concat("2");}
+        }
+
+        document.getElementById("3").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "3"; } 
+            else {document.getElementById("dato").value = num.concat("3");}
+        }
+
+        document.getElementById("4").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "4"; } 
+            else {document.getElementById("dato").value = num.concat("4");}
+        }
+
+        document.getElementById("5").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "5"; } 
+            else {document.getElementById("dato").value = num.concat("5");}
+        }
+
+        document.getElementById("6").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "6"; } 
+            else {document.getElementById("dato").value = num.concat("6");}
+        }
+
+        document.getElementById("7").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "7"; } 
+            else {document.getElementById("dato").value = num.concat("7");}
+        }
+
+        document.getElementById("8").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "8"; } 
+            else {document.getElementById("dato").value = num.concat("8");}
+        }
+
+        document.getElementById("9").onclick=function(){
+            var num=document.getElementById("dato").value;
+            if (num=="0") { document.getElementById("dato").value = "9"; } 
+            else {document.getElementById("dato").value = num.concat("9");}
+        }
+
+        /*Botonera de acciones*/
+
+        document.getElementById("mas").onclick=function(){
+            var num = parseInt(document.getElementById("dato").value);
+            acum = acum + num;
+            document.getElementById("dato").value = null;
+        }
+        
+        document.getElementById("acum").onclick=function(){
+            alert("El valor acumulado hasta el momento es"+" "+acum);
+        }
+        
+        document.getElementById("borrarAcum").onclick=function(){
+            acum = 0;
+        }
+
+        document.getElementById("borrarDisplay").onclick=function(){
+            document.getElementById("dato").value = null;
+        }
+
+       
+    </script>
+
+    <br><br>
+
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="../index.php">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+
+</body>
+</html>

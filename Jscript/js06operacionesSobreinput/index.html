@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js06operacionesSobreInput</title>
+</head>
+<body>
+    <h3>Introducir un valor en el cuadro de texto y despues pulsar un boton para la correspondiente operacion</h3>
+    <input type="text" name="" id="campo">
+    <button id="valor">Muestra Valor</button>
+    <button id="suma1">Suma 1</button>
+    <button id="eleva">X ** 2</button>
+    <button id="multi">Multiplica * 2</button>
+    <button id="elevaX">2 ** X</button>
+
+    <script>
+        
+        document.getElementById("valor").onclick=function(){
+            alert('El numero ingresado es'+ " " + document.getElementById("campo").value);
+        }
+
+        document.getElementById("suma1").onclick=function(){
+            var numero = parseInt(document.getElementById("campo").value);
+            numero = numero + 1;
+            document.getElementById("campo").value = numero;
+        }
+
+        document.getElementById("eleva").onclick=function(){
+            var numero = parseInt(document.getElementById("campo").value);
+            var resultado = Math.pow(numero,2);
+            document.getElementById("campo").value = resultado;
+        }
+
+        document.getElementById("multi").onclick=function(){
+            var numero = parseInt(document.getElementById("campo").value);
+            numero = numero * 2;
+            document.getElementById("campo").value = numero;
+        }
+
+        document.getElementById("elevaX").onclick=function(){
+            var numero = parseInt(document.getElementById("campo").value);
+            var resultado = Math.pow(2,numero)
+            document.getElementById("campo").value = resultado; //ver
+        }
+
+    </script>
+
+    <br><br>
+
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="../index.php">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+
+</body>
+</html>

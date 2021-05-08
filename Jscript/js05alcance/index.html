@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js05alcance</title>
+    <style>
+        html, body{
+            width: 100%;
+            height: 20%;
+        }
+
+        .boton{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="boton" id="incorrecto">Inicializacion Incorrecta</button>
+    <button class="boton" id="correcto">Inicializacion Correcta</button>
+    <button class="boton" id="global">Muestra Variable Global</button>
+
+    <script>
+        var entrada2 = null;
+
+        document.getElementById("incorrecto").onclick=function(){
+            var entrada1 = prompt("Ingrese valor para la variable local:");
+            alert('El valor de la variable local ingresada es: ' + entrada1);
+            alert('El tipo de la variable local ingresada es: ' + typeof entrada1);
+        }
+
+        document.getElementById("correcto").onclick=function(){
+            entrada2 = prompt("Ingrese valor para la variable Global:");
+            alert('El valor de la variable global ingresada es: ' + entrada2);
+            alert('El tipo de la variable global ingresada es: ' + typeof entrada2);
+        }
+
+        document.getElementById("global").onclick=function(){
+            if (entrada2) {
+                alert('Valor de variable global: ' + entrada2);
+            }else alert('La variable global no a sido asignada');
+        }
+
+    </script>
+
+    <br><br>
+
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="../index.php">Volver Atras</a>
+    <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+
+</body>
+</html>
