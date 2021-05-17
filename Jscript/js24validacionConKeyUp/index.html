@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js21formComfirmacion</title>
+    <title>js24validacionConKeyUp</title>
     <style>
         body,html{
             margin: 0%;
@@ -57,13 +57,13 @@
 </head>
 <body>
     <div class="contenedor">
-        <h3>Confirmacion de Envio y Reset</h3>
+        <h3>Ejercicio de validacion de un INPUT</h3>
         <div class="formulario">
             <form id="form">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
-                <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" id="apellido">
+                <label for="dia">Ingrese el dia del Mes:</label>
+                <input type="number" min="1" max="31" name="dia" id="dia">
+                <label for="mes">Ingrese el Mes:</label>
+                <input type="number" min="1" max="12" name="mes" id="mes">
                 <button type="submit" id="envio">Enviar</button>
                 <button type="reset" id="reset">Reset</button>
             </form>
@@ -75,6 +75,18 @@
     </div>
 
     <script>
+
+        document.getElementById('dia').onkeyup = function(){
+            if ( !document.getElementById('dia').checkValidity() ) {
+                alert('El valor del DIA ingresado no es correcto! Debe seleccionar un numero entre 1 y 31')
+            }
+        }
+
+        document.getElementById('mes').onkeyup = function(){
+            if ( !document.getElementById('mes').checkValidity() ) {
+                alert('El valor del MES ingresado no es correcto! Debe seleccionar un numero entre 1 y 12')
+            }
+        }
 
         document.getElementById('envio').onclick = function(){
             var confirma = confirm('¿Esta seguro que desea enviar los datos?');

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js28formAbm</title>
+    <style>
+        body,html{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .contenido p{
+            opacity: 0.5;
+        }
+
+        .modal{
+            position: fixed;
+            width: 50%;
+            height: 300px;
+            top: 20%;
+            left: 25%;
+            background-color: darkblue;
+            color: white;
+            visibility: visible;
+        }
+
+        .modal h3{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            box-sizing: border-box;
+            padding-top: 10px;
+        }
+
+        .modal .formulario{
+            margin: auto;
+            width: 50%;
+        }
+
+        .modal .formulario #form label, .modal .formulario #form input{
+            display: block;
+        }
+
+        .modal .formulario #form button{
+            margin-top: 20px;
+        }
+
+        .footer{
+            margin: auto;
+            margin-top: 20px;
+            width: 20%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <p>¿Qué es JavaScript? Un poco de historia
+            Se trata de un lenguaje de programación que permite realizar acciones de diversos grados de complejidad en sitios web sin necesidad de compilación. El hecho de que los mismos navegadores lean y asimilen el código para efectuar las instrucciones indicadas por éste, ha convertido a JavaScript en un lenguaje de programación muy utilizado y apreciado por los desarrolladores.
+            
+            A día de hoy, es el lenguaje en el que se desarrolla una página web cuando los mecanismos que se desean implantar encierran un mayor nivel de dificultad de los que se suelen plantear a menudo. Pero, antes de continuar hablando de la actualidad de JavaScript, vamos a hacer un breve regreso al pasado para entender qué circunstancias dieron origen a este lenguaje de programación.
+            
+            Esa época en la que usábamos los módems que se conectaban a la línea telefónica, fue también el momento en el que a las aplicaciones para web se le empezaba a añadir complejidad. Esto se trasladó a las páginas web, que incluían formularios de cada vez más completos y complicados, lo que afectó a la calidad de la navegación online.
+            
+            Con una velocidad de navegación tan lenta y unas aplicaciones que avanzaban sin parar, resultó evidente que HTML se estaba quedando corto, así que los programadores tuvieron que pararse a pensar cómo solucionar este desfase. La respuesta llegó en forma de un lenguaje de programación que podía ejecutarse directamente en el navegador del lado del usuario.
+            
+            Adaptando tecnologías de programación ya existentes, el navegador Netscape desarrolló LiveScript, un lenguaje que permitía crear programas pequeños en las páginas y que fuese más sencillo que Java, creado por Sun Microsystems. Ambas compañías, Netscape y Sun Microsystems, unieron fuerzas y conocimiento para desarrollar juntas la programación JavaScript.
+            
+            Y así, en líneas muy generales, nació un lenguaje de desarrollo web fácil de utilizar y accesible a personas con nociones básicas de programación o, incluso, con ningún conocimiento previo en la materia, lo cual explica por qué la popularidad de JavaScript gozó de tan buena salud desde sus comienzos y también por qué lo sigue haciendo a día de hoy.</p>
+        <p>¿Qué es JavaScript? Un poco de historia
+            Se trata de un lenguaje de programación que permite realizar acciones de diversos grados de complejidad en sitios web sin necesidad de compilación. El hecho de que los mismos navegadores lean y asimilen el código para efectuar las instrucciones indicadas por éste, ha convertido a JavaScript en un lenguaje de programación muy utilizado y apreciado por los desarrolladores.
+            
+            A día de hoy, es el lenguaje en el que se desarrolla una página web cuando los mecanismos que se desean implantar encierran un mayor nivel de dificultad de los que se suelen plantear a menudo. Pero, antes de continuar hablando de la actualidad de JavaScript, vamos a hacer un breve regreso al pasado para entender qué circunstancias dieron origen a este lenguaje de programación.
+            
+            Esa época en la que usábamos los módems que se conectaban a la línea telefónica, fue también el momento en el que a las aplicaciones para web se le empezaba a añadir complejidad. Esto se trasladó a las páginas web, que incluían formularios de cada vez más completos y complicados, lo que afectó a la calidad de la navegación online.
+            
+            Con una velocidad de navegación tan lenta y unas aplicaciones que avanzaban sin parar, resultó evidente que HTML se estaba quedando corto, así que los programadores tuvieron que pararse a pensar cómo solucionar este desfase. La respuesta llegó en forma de un lenguaje de programación que podía ejecutarse directamente en el navegador del lado del usuario.
+            
+            Adaptando tecnologías de programación ya existentes, el navegador Netscape desarrolló LiveScript, un lenguaje que permitía crear programas pequeños en las páginas y que fuese más sencillo que Java, creado por Sun Microsystems. Ambas compañías, Netscape y Sun Microsystems, unieron fuerzas y conocimiento para desarrollar juntas la programación JavaScript.
+            
+            Y así, en líneas muy generales, nació un lenguaje de desarrollo web fácil de utilizar y accesible a personas con nociones básicas de programación o, incluso, con ningún conocimiento previo en la materia, lo cual explica por qué la popularidad de JavaScript gozó de tan buena salud desde sus comienzos y también por qué lo sigue haciendo a día de hoy.</p>
+        <p>¿Qué es JavaScript? Un poco de historia
+            Se trata de un lenguaje de programación que permite realizar acciones de diversos grados de complejidad en sitios web sin necesidad de compilación. El hecho de que los mismos navegadores lean y asimilen el código para efectuar las instrucciones indicadas por éste, ha convertido a JavaScript en un lenguaje de programación muy utilizado y apreciado por los desarrolladores.
+            
+            A día de hoy, es el lenguaje en el que se desarrolla una página web cuando los mecanismos que se desean implantar encierran un mayor nivel de dificultad de los que se suelen plantear a menudo. Pero, antes de continuar hablando de la actualidad de JavaScript, vamos a hacer un breve regreso al pasado para entender qué circunstancias dieron origen a este lenguaje de programación.
+            
+            Esa época en la que usábamos los módems que se conectaban a la línea telefónica, fue también el momento en el que a las aplicaciones para web se le empezaba a añadir complejidad. Esto se trasladó a las páginas web, que incluían formularios de cada vez más completos y complicados, lo que afectó a la calidad de la navegación online.
+            
+            Con una velocidad de navegación tan lenta y unas aplicaciones que avanzaban sin parar, resultó evidente que HTML se estaba quedando corto, así que los programadores tuvieron que pararse a pensar cómo solucionar este desfase. La respuesta llegó en forma de un lenguaje de programación que podía ejecutarse directamente en el navegador del lado del usuario.
+            
+            Adaptando tecnologías de programación ya existentes, el navegador Netscape desarrolló LiveScript, un lenguaje que permitía crear programas pequeños en las páginas y que fuese más sencillo que Java, creado por Sun Microsystems. Ambas compañías, Netscape y Sun Microsystems, unieron fuerzas y conocimiento para desarrollar juntas la programación JavaScript.
+            
+            Y así, en líneas muy generales, nació un lenguaje de desarrollo web fácil de utilizar y accesible a personas con nociones básicas de programación o, incluso, con ningún conocimiento previo en la materia, lo cual explica por qué la popularidad de JavaScript gozó de tan buena salud desde sus comienzos y también por qué lo sigue haciendo a día de hoy.</p>
+        <p>¿Qué es JavaScript? Un poco de historia
+            Se trata de un lenguaje de programación que permite realizar acciones de diversos grados de complejidad en sitios web sin necesidad de compilación. El hecho de que los mismos navegadores lean y asimilen el código para efectuar las instrucciones indicadas por éste, ha convertido a JavaScript en un lenguaje de programación muy utilizado y apreciado por los desarrolladores.
+            
+            A día de hoy, es el lenguaje en el que se desarrolla una página web cuando los mecanismos que se desean implantar encierran un mayor nivel de dificultad de los que se suelen plantear a menudo. Pero, antes de continuar hablando de la actualidad de JavaScript, vamos a hacer un breve regreso al pasado para entender qué circunstancias dieron origen a este lenguaje de programación.
+            
+            Esa época en la que usábamos los módems que se conectaban a la línea telefónica, fue también el momento en el que a las aplicaciones para web se le empezaba a añadir complejidad. Esto se trasladó a las páginas web, que incluían formularios de cada vez más completos y complicados, lo que afectó a la calidad de la navegación online.
+            
+            Con una velocidad de navegación tan lenta y unas aplicaciones que avanzaban sin parar, resultó evidente que HTML se estaba quedando corto, así que los programadores tuvieron que pararse a pensar cómo solucionar este desfase. La respuesta llegó en forma de un lenguaje de programación que podía ejecutarse directamente en el navegador del lado del usuario.
+            
+            Adaptando tecnologías de programación ya existentes, el navegador Netscape desarrolló LiveScript, un lenguaje que permitía crear programas pequeños en las páginas y que fuese más sencillo que Java, creado por Sun Microsystems. Ambas compañías, Netscape y Sun Microsystems, unieron fuerzas y conocimiento para desarrollar juntas la programación JavaScript.
+            
+            Y así, en líneas muy generales, nació un lenguaje de desarrollo web fácil de utilizar y accesible a personas con nociones básicas de programación o, incluso, con ningún conocimiento previo en la materia, lo cual explica por qué la popularidad de JavaScript gozó de tan buena salud desde sus comienzos y también por qué lo sigue haciendo a día de hoy.</p>
+        <p>¿Qué es JavaScript? Un poco de historia
+            Se trata de un lenguaje de programación que permite realizar acciones de diversos grados de complejidad en sitios web sin necesidad de compilación. El hecho de que los mismos navegadores lean y asimilen el código para efectuar las instrucciones indicadas por éste, ha convertido a JavaScript en un lenguaje de programación muy utilizado y apreciado por los desarrolladores.
+            
+            A día de hoy, es el lenguaje en el que se desarrolla una página web cuando los mecanismos que se desean implantar encierran un mayor nivel de dificultad de los que se suelen plantear a menudo. Pero, antes de continuar hablando de la actualidad de JavaScript, vamos a hacer un breve regreso al pasado para entender qué circunstancias dieron origen a este lenguaje de programación.
+            
+            Esa época en la que usábamos los módems que se conectaban a la línea telefónica, fue también el momento en el que a las aplicaciones para web se le empezaba a añadir complejidad. Esto se trasladó a las páginas web, que incluían formularios de cada vez más completos y complicados, lo que afectó a la calidad de la navegación online.
+            
+            Con una velocidad de navegación tan lenta y unas aplicaciones que avanzaban sin parar, resultó evidente que HTML se estaba quedando corto, así que los programadores tuvieron que pararse a pensar cómo solucionar este desfase. La respuesta llegó en forma de un lenguaje de programación que podía ejecutarse directamente en el navegador del lado del usuario.
+            
+            Adaptando tecnologías de programación ya existentes, el navegador Netscape desarrolló LiveScript, un lenguaje que permitía crear programas pequeños en las páginas y que fuese más sencillo que Java, creado por Sun Microsystems. Ambas compañías, Netscape y Sun Microsystems, unieron fuerzas y conocimiento para desarrollar juntas la programación JavaScript.
+            
+            Y así, en líneas muy generales, nació un lenguaje de desarrollo web fácil de utilizar y accesible a personas con nociones básicas de programación o, incluso, con ningún conocimiento previo en la materia, lo cual explica por qué la popularidad de JavaScript gozó de tan buena salud desde sus comienzos y también por qué lo sigue haciendo a día de hoy.</p>
+    </div>
+    <div class="modal">
+        <h3>Formulario ABM</h3>
+        <div class="formulario">
+            <form id="form">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="saldo">Nombre:</label>
+                <input type="number" min="100" name="saldo" id="saldo" required>
+                <button type="reset" id="reset">Blanquear</button>
+                <button id="alta">Alta</button>
+                <button id="modificacion">Modi</button>
+                <button id="baja">Baja</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Jscript/">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </div>
+
+    <script>
+
+        document.getElementById('reset').disabled=true;
+        document.getElementById('alta').disabled=true;
+        document.getElementById('modificacion').disabled=true;
+        document.getElementById('baja').disabled=true;
+
+        document.getElementById('apellido').onkeyup = function(){
+            if (document.getElementById('apellido').value == ""){
+                document.getElementById('reset').disabled=true;
+                document.getElementById('alta').disabled=true;
+                document.getElementById('modificacion').disabled=true;
+                document.getElementById('baja').disabled=true;
+            }else if (document.getElementById('apellido').value != ""){
+                document.getElementById('reset').disabled=false;
+                document.getElementById('alta').disabled=true;
+                document.getElementById('modificacion').disabled=true;
+                document.getElementById('baja').disabled=true;
+            }
+
+            if(document.getElementById('apellido').value != "" &&
+                document.getElementById('nombre').value != "" &&
+                document.getElementById('saldo').value != ""){
+                    document.getElementById('reset').disabled=false;
+                    document.getElementById('alta').disabled=false;
+                    document.getElementById('modificacion').disabled=false;
+                    document.getElementById('baja').disabled=false;
+            }
+
+            if(document.getElementById('apellido').value == "" ||
+                document.getElementById('nombre').value == "" ||
+                document.getElementById('saldo').value == ""){
+                    document.getElementById('reset').disabled=false;
+                    document.getElementById('alta').disabled=true;
+                    document.getElementById('modificacion').disabled=true;
+                    document.getElementById('baja').disabled=true;
+            }
+
+            if(document.getElementById('apellido').value == "" &&
+                document.getElementById('nombre').value == "" &&
+                document.getElementById('saldo').value == ""){
+                    document.getElementById('reset').disabled=true;
+                    document.getElementById('alta').disabled=true;
+                    document.getElementById('modificacion').disabled=true;
+                    document.getElementById('baja').disabled=true;
+            }
+        }
+
+        document.getElementById('nombre').onkeyup = function(){
+            if (document.getElementById('nombre').value == ""){
+                document.getElementById('reset').disabled=true;
+                document.getElementById('alta').disabled=true;
+                document.getElementById('modificacion').disabled=true;
+                document.getElementById('baja').disabled=true;
+            }else if (document.getElementById('nombre').value != ""){
+                document.getElementById('reset').disabled=false;
+                document.getElementById('alta').disabled=true;
+                document.getElementById('modificacion').disabled=true;
+                document.getElementById('baja').disabled=true;
+            }
+
+            if(document.getElementById('apellido').value != "" &&
+                document.getElementById('nombre').value != "" &&
+                document.getElementById('saldo').value != ""){
+                    document.getElementById('reset').disabled=false;
+                    document.getElementById('alta').disabled=false;
+                    document.getElementById('modificacion').disabled=false;
+                    document.getElementById('baja').disabled=false;
+            }
+
+            if(document.getElementById('apellido').value == "" ||
+                document.getElementById('nombre').value == "" ||
+                document.getElementById('saldo').value == ""){
+                    document.getElementById('reset').disabled=false;
+                    document.getElementById('alta').disabled=true;
+                    document.getElementById('modificacion').disabled=true;
+                    document.getElementById('baja').disabled=true;
+            }
+
+            if(document.getElementById('apellido').value == "" &&
+                document.getElementById('nombre').value == "" &&
+                document.getElementById('saldo').value == ""){
+                    document.getElementById('reset').disabled=true;
+                    document.getElementById('alta').disabled=true;
+                    document.getElementById('modificacion').disabled=true;
+                    document.getElementById('baja').disabled=true;
+            }
+        }
+
+        document.getElementById('saldo').onkeyup = function(){
+            if (document.getElementById('saldo').value == ""){
+                document.getElementById('reset').disabled=true;
+                document.getElementById('alta').disabled=true;
+                document.getElementById('modificacion').disabled=true;
+                document.getElementById('baja').disabled=true;
+            }else if (document.getElementById('saldo').value != ""){
+                document.getElementById('reset').disabled=false;
+                document.getElementById('alta').disabled=true;
+                document.getElementById('modificacion').disabled=true;
+                document.getElementById('baja').disabled=true;
+            }
+
+            if(document.getElementById('apellido').value != "" &&
+                document.getElementById('nombre').value != "" &&
+                document.getElementById('saldo').value != ""){
+                    document.getElementById('reset').disabled=false;
+                    document.getElementById('alta').disabled=false;
+                    document.getElementById('modificacion').disabled=false;
+                    document.getElementById('baja').disabled=false;
+            }
+
+            if(document.getElementById('apellido').value == "" ||
+                document.getElementById('nombre').value == "" ||
+                document.getElementById('saldo').value == ""){
+                    document.getElementById('reset').disabled=false;
+                    document.getElementById('alta').disabled=true;
+                    document.getElementById('modificacion').disabled=true;
+                    document.getElementById('baja').disabled=true;
+            }
+
+            if(document.getElementById('apellido').value == "" &&
+                document.getElementById('nombre').value == "" &&
+                document.getElementById('saldo').value == ""){
+                    document.getElementById('reset').disabled=true;
+                    document.getElementById('alta').disabled=true;
+                    document.getElementById('modificacion').disabled=true;
+                    document.getElementById('baja').disabled=true;
+            }
+        }
+
+        document.getElementById('reset').onclick = function(){
+            document.getElementById('form').reset();
+            document.getElementById('reset').disabled=true;
+            document.getElementById('alta').disabled=true;
+            document.getElementById('modificacion').disabled=true;
+            document.getElementById('baja').disabled=true;
+        };
+
+    </script>
+</body>
+</html>

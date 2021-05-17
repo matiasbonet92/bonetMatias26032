@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js31creacionObjetos</title>
+    <style>
+        body,html{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        #interno{
+            margin: auto;
+            width: 60%;
+            height: 50%;
+            margin-top: 10%;
+            background-color: coral;
+            overflow: auto;
+        }
+        
+        button{
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .claseObjeto{
+            margin: auto;
+            margin-top: 10px;
+            margin-left: 20px;
+            width: 50%;
+            height: 20%;
+            border-style: solid;
+            border-color: blue;
+            background-color: lightblue;
+            color: black;
+            font-size: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            text-align:center;
+        }
+
+        .footer{
+            margin: auto;
+            margin-top: 20px;
+            width: 20%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="crear">Crear</button>
+    <button id="limpiar">Limpiar</button>
+    <button id="info">Info</button>
+    <div id="interno"></div>
+    <div class="footer">
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Jscript/">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </div>
+
+    <script>
+        var textos = []
+        document.getElementById('crear').onclick=function(){
+            var objDiv = document.createElement("div");
+            var textoHtml = "<h1> Elemento creado: ";
+            textoHtml = textoHtml + document.getElementById('interno').childNodes.length;
+            textoHtml = textoHtml + "</h1>";
+            textos.push({id: document.getElementById('interno').childNodes.length, texto: textoHtml})
+            objDiv.className="claseObjeto";
+            document.getElementById('interno').appendChild(objDiv).innerHTML=textoHtml;
+        }
+
+        document.getElementById('limpiar').onclick=function(){
+            while(document.getElementById('interno').childNodes.length>0){
+                document.getElementById('interno').removeChild(document.getElementById('interno').childNodes[0])
+            }
+        }
+
+        document.getElementById('info').onclick=function(){
+            if(!document.getElementById('interno').childNodes.length){
+                alert('Longitud de childNodes: ' + " " + document.getElementById('interno').childNodes.length)
+            }else if(document.getElementById('interno').childNodes.length >= 0){
+                alert('Longitud de childNodes: ' + document.getElementById('interno').childNodes.length)
+                textos.forEach(function(item,indice){
+                    alert('Indice: ' + " " + indice + " " + " - " + 'inner HTML: ' + " " + item.texto)
+                }); 
+            }
+        }
+
+    </script>
+</body>
+</html>

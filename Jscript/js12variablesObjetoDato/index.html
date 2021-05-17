@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js12VariablesObjetoDato</title>
+    <style>
+        body,html{
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            background-color: lightgray;
+        }
+
+        .adicionPersona{
+            margin: auto;
+            margin-top: 20px;
+            width: 90%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 15px;
+            padding-left: 50px;
+            background-color: lightcoral;
+        }
+
+        .adicionPersona h3{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            margin-top: 0%;
+        }
+
+        .adicionPersona label{
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            display: block;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        .adicionPersona button{
+            margin-top: 20px;
+            display: block;
+        }
+
+        .control{
+            margin: auto;
+            margin-top: 20px;
+            width: 90%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 15px;
+            padding-left: 50px;
+            background-color: lightseagreen;
+        }
+
+        .control h3{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            margin-top: 0%;
+        }
+
+        .footer{
+            margin: auto;
+            margin-top: 20px;
+            width: 20%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="adicionPersona">
+        <h3>Adicionar Persona</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="" id="nombre">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="" id="apellido">
+        <label for="nacimiento">Nacimiento:</label>
+        <input type="text" name="" id="nacimiento">
+        <button id="botonCreacion">Crear Persona</button>
+    </div>
+    <div class="control">
+        <h3>Control</h3>
+        <button id="listaPersonas">Lista de Personas</button>
+        <button id="ocultarListaPersonas">Ocultar Presentacion</button>
+        <div id="presentacion"></div>
+    </div>
+
+    <div class="footer">
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Jscript/">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </div>
+
+    <script>
+        var persona = { nombre: "Matias" , apellido: "Bonet" , fnac: "14/03/1992" };
+        var arregloPersona = [persona];
+        arregloPersona.push({nombre: "Maira", apellido: "Vazquez", fnac: "18/04/1993"});
+        var objetoPersonas = {personas: arregloPersona };
+
+        document.getElementById('botonCreacion').onclick = function(){
+
+            if (document.getElementById('presentacion').childNodes.length==0) {
+                arregloPersona.push({
+                    nombre: document.getElementById('nombre').value,
+                    apellido: document.getElementById('apellido').value,
+                    fnac: document.getElementById('nacimiento').value
+                });
+                document.getElementById('nombre').value = "";
+                document.getElementById('apellido').value = "";
+                document.getElementById('nacimiento').value = "";
+            }
+            else
+            {
+                arregloPersona.push({
+                    nombre: document.getElementById('nombre').value,
+                    apellido: document.getElementById('apellido').value,
+                    fnac: document.getElementById('nacimiento').value
+                });
+
+                document.getElementById('nombre').value = "";
+                document.getElementById('apellido').value = "";
+                document.getElementById('nacimiento').value = "";
+
+                objetoPersonas.personas.forEach(function(item,indice){
+                    var texto = "<h1 style='text-decoration: underline; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;'>Presentacion</h1>";
+                    texto = texto + "<table style='border-collapse: collapse; border: solid; border-color: black;'>";
+                    arregloPersona.forEach(function(item,indice){
+                        texto = texto + "<tr style='border-collapse: collapse; border: solid; border-color: black;'>";
+                        texto =texto + "<td style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; border-collapse: collapse; border: solid; border-color: black;'>" + item.nombre + "</td>"
+                        texto = texto + "<td style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; border-collapse: collapse; border: solid; border-color: black;'>" + item.apellido + "</td>"
+                        texto = texto + "<td style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; border-collapse: collapse; border: solid; border-color: black;'>" + item.fnac + "</td>"
+                        texto = texto + "</tr>";
+                    });   
+                    texto = texto + "</table>"
+                    texto = texto + "<h4 style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;'>Longitud del arreglo de objetos:" + " " + arregloPersona.length + "</h4>";
+                    document.getElementById('presentacion').innerHTML = texto;
+                });
+            }
+        }
+        
+        document.getElementById('listaPersonas').onclick = function() {
+            var texto = "<h1 style='text-decoration: underline; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;'>Presentacion</h1>";
+            texto = texto + "<table style='border-collapse: collapse; border: solid; border-color: black;'>";
+            arregloPersona.forEach(function(item,indice){
+                texto = texto + "<tr style='border-collapse: collapse; border: solid; border-color: black;'>";
+                texto =texto + "<td style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; border-collapse: collapse; border: solid; border-color: black;'>" + item.nombre + "</td>"
+                texto = texto + "<td style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; border-collapse: collapse; border: solid; border-color: black;'>" + item.apellido + "</td>"
+                texto = texto + "<td style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; border-collapse: collapse; border: solid; border-color: black;'>" + item.fnac + "</td>"
+                texto = texto + "</tr>";
+            });   
+            texto = texto + "</table>"
+            texto = texto + "<h4 style='font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;'>Longitud del arreglo de objetos:" + " " + arregloPersona.length + "</h4>";
+            document.getElementById('presentacion').innerHTML = texto;
+        }
+
+        document.getElementById('ocultarListaPersonas').onclick = function(){
+            while(document.getElementById('presentacion').childNodes.length>0){
+                document.getElementById('presentacion').removeChild(document.getElementById('presentacion').childNodes[0]);
+            }
+        }
+
+    </script>
+</body>
+</html>
