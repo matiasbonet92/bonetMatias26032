@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esp05FormVariablesArregloDeObjetos</title>
+    <link rel="stylesheet" href="./especial05.css">
+</head>
+<body>
+    <header>Formulario de alta de Jugadores - MASTER Jugadores</header>
+    <div class="formulario">
+        <form action="./Respuesta.html" method="GET" id="form">
+            <div class="formInternos">
+                <label for="codjug">Codigo Jugador:</label><br>
+                <input type="text" name="codjug" id="codjug" required>
+            </div>
+            <div class="formInternos">
+                <label for="nombre">Nombre Completo:</label><br>
+                <input type="text" name="nombrejug" id="nombre" required>
+            </div>
+            <div class="formInternos">
+                <label for="nac">Fecha de Nacimiento:</label><br>
+                <input type="date" name="nacimiento" id="nac" required>
+            </div>
+            <div class="formInternos">
+                <label for="posicion">Posicion:</label><br>
+                <input type="text" name="pos" id="posicion" required>
+            </div>
+            <div class="formInternos">
+                <label for="equipo">Equipo:</label><br>
+                <select name="equipo" id="equipo" required></select>
+            </div>
+            <div class="formInternos">
+                <label for="edad">Edad:</label><br>
+                <input type="number" min="18" name="edad" id="edad" required>
+            </div>
+            <div class="formInternos">
+                <input type="submit" name="" id="enviar" value="Enviar">
+            </div>
+        </form>
+    </div>    
+    <footer>
+        Pie del formulario
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/Especiales/">Volver Atras</a>
+        <a style="text-align: center; color:white; border: black; border-style: solid; border-width: medium; background-color: blue; text-decoration: none;" href="/index.php">Volver al Inicio</a>
+    </footer>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./especial05.js" type="text/javascript"></script>
+</body>
+</html>
