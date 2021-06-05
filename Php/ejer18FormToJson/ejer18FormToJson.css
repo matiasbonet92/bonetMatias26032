@@ -1,0 +1,185 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html,body{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#contenedor{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#contenedor header{
+    background-color: teal ;
+    text-align: center;
+    width: 100;
+    height: 10%;
+    margin: auto;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+#contenedor .contenido{
+    background-color: whitesmoke ;
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+#btnModal{
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contenedor footer{
+    margin: auto;
+    width: 100%;
+    height: 10%;
+    background-color: teal;
+    text-align: center;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+#contenedor footer a{
+    font-size: 15px;
+    align-items: center;
+}
+
+/*diseño acciones en los click*/
+div#contenedor{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+div#contenedor.contDesactivo{
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+div#modal{
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    visibility: hidden;
+    width: 50%;
+    height: 80%;
+}
+
+div#modal.modalActiva{
+    visibility: visible;
+}
+
+div#modal.modalDesactivo{
+    visibility: hidden;
+}
+
+div#modal.contActivo{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*diseño modal*/
+#modal{
+    border: solid 3px black;
+    border-radius: 24px;
+}
+
+.cabecera{
+    margin: auto;
+    height: 10%;
+    background-color: teal;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cabecera header{
+    width: 94%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 7px;
+    float: left;
+}
+
+.cabecera button{
+    width: 6%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    background-color: red;
+    border: solid 1px black;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+}
+
+.formulario{
+    margin: auto;
+    width: auto;
+    height: 80%;
+    background-color: whitesmoke;
+}
+
+footer{
+    margin: auto;
+    height: 10%;
+    background-color: teal;
+    text-align: center;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.formulario .formInternos label{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 36%;
+}
+
+.formulario .formInternos input{
+    height: 30px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-left: 36%;
+    background-color: teal;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.formulario .formInternos #enviar{
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 44%;
+    cursor: pointer;
+}

@@ -21,10 +21,10 @@
             <input type="image" src="./flecha-derecha.svg" alt="" id="envio">
         </div>
         <div id="div3">
-            <h3>Resultado:</h3>
+            <h2>Resultado:</h2>
         </div>
         <div id="div4">
-            <h3>Estado del Requerimiento:</h3>
+            <h2>Estado del Requerimiento:</h2>
         </div>
         <div id="div5">
         </div>
@@ -49,8 +49,8 @@
                 data: {frase: $("#frase").val()},
                 success: function(respuestaDelServer,estado) {
                     $("#div3").removeClass("estiloRecibiendo");
-                    $("#div3").html("<h1>Resultado: </h1><h4>" + respuestaDelServer + "</h4>"); 
-                    $("#div4").append("<h4>" + estado + "</h4>");
+                    $("#div3").html("<h2>Resultado: </h2><h4 style='margin-top: 12px; margin-left:10px;'>" + respuestaDelServer + "</h4>"); 
+                    $("#div4").append("<h4 style='margin-top: 15px; margin-left:10px; color: darkblue; font-style: italic; font-size: 20px;'>" + estado + "</h4>");
                 }
             });
         })
