@@ -1,7 +1,7 @@
 $("#enviar").click(function(){
     $("#respuesta").empty();
     $("#respuesta").addClass("estiloRecibiendo");
-    $("#respuesta").html("<h2>Esperando Respuesta ...</h2>");
+    $("#respuesta").html("<h2 style='margin-left: 20px; margin-top: 5px; color: darkblue;'>Esperando Respuesta ...</h2>");
 
     $.ajax({
         type:"post",
@@ -16,7 +16,7 @@ $("#enviar").click(function(){
         },
         success: function(respuestaDelServer,estado) {
             $("#respuesta").removeClass("estiloRecibiendo");
-            $("#respuesta").html("<h2>Resultado de la transformacion a JSON en el servidor: </h2><h4 style='margin-top: 12px; margin-left:10px;'>" + respuestaDelServer + "</h4>");
+            $("#respuesta").html("<h2 style='margin-left: 20px; margin-top: 5px; color: darkblue;'>Resultado de la transformacion a JSON en el servidor: </h2><h4 style='margin-top: 12px; margin-left:10px;'>" + respuestaDelServer + "</h4>");
         }
     });
 });

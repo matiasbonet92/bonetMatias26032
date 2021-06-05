@@ -4,7 +4,7 @@
         $objDatos = new stdclass;
         
         if (isset($_POST["id"])) {
-            $objDatos->id = $_POST["frase"];
+            $objDatos->id = $_POST["id"];
         }
         if (isset($_POST["login"])) {
             $objDatos->login = $_POST["login"];
@@ -13,7 +13,7 @@
             $objDatos->apellido = $_POST["apellido"];
         }
         if (isset($_POST["nombres"])) {
-            $objDatos->nombres = $_POST["nombre"];
+            $objDatos->nombres = $_POST["nombres"];
         }
         if (isset($_POST["nac"])) {
             $objDatos->fechaNac = $_POST["nac"];
