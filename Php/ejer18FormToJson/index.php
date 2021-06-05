@@ -44,7 +44,7 @@
                     <input type="text" name="nombres" id="nombres" required>
                 </div>
                 <div class="formInternos">
-                    <label for="nac">Edad:</label><br>
+                    <label for="nacimiento">Edad:</label><br>
                     <input type="date" name="fnac" id="nacimiento" required>
                 </div>
                 <div class="formInternos">

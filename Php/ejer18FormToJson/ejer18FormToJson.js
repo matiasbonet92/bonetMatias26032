@@ -1,24 +1,32 @@
 $("#enviar").click(function(){
-    $("#respuesta").empty();
-    $("#respuesta").addClass("estiloRecibiendo");
-    $("#respuesta").html("<h2 style='margin-left: 20px; margin-top: 5px; color: darkblue;'>Esperando Respuesta ...</h2>");
 
-    $.ajax({
-        type:"post",
-        url:"./Respuesta.php",
-        data: 
-        {
-            id: $("#id").val(),
-            login: $("#login").val(),
-            apellido: $("#apellido").val(),
-            nombres: $("#nombres").val(),
-            fechaNac: $("#nacimiento").val(),
-        },
-        success: function(respuestaDelServer,estado) {
-            $("#respuesta").removeClass("estiloRecibiendo");
-            $("#respuesta").html("<h2 style='margin-left: 20px; margin-top: 5px; color: darkblue;'>Resultado de la transformacion a JSON en el servidor: </h2><h4 style='margin-top: 12px; margin-left:10px;'>" + respuestaDelServer + "</h4>");
-        }
-    });
+    var confirma = confirm('¿Esta seguro que desea enviar los datos?');
+
+    if (confirma) {
+        $("#respuesta").empty();
+        $("#respuesta").addClass("estiloRecibiendo");
+        $("#respuesta").html("<h2 style='margin-left: 20px; margin-top: 5px; color: darkblue;'>Esperando Respuesta ...</h2>");
+
+        $.ajax({
+            type:"post",
+            url:"./Respuesta.php",
+            data: 
+            {
+                id: $("#id").val(),
+                login: $("#login").val(),
+                apellido: $("#apellido").val(),
+                nombres: $("#nombres").val(),
+                fechaNac: $("#nacimiento").val(),
+            },
+            success: function(respuestaDelServer,estado) {
+                $("#respuesta").removeClass("estiloRecibiendo");
+                $("#respuesta").html("<h2 style='margin-left: 20px; margin-top: 5px; color: darkblue;'>Resultado de la transformacion a JSON en el servidor: </h2><h4 style='margin-top: 12px; margin-left:10px;'>" + respuestaDelServer + "</h4>");
+            }
+        });
+    }else{
+        return false;
+    }
+    
 });
 
 $("#btnModal").click(function(){
