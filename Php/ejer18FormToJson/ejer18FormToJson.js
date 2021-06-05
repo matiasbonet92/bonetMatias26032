@@ -12,7 +12,7 @@ $("#enviar").click(function(){
             login: $("#login").val(),
             apellido: $("#apellido").val(),
             nombres: $("#nombres").val(),
-            fechaNac: $("#nac").val()
+            fechaNac: $("#nac").val(),
         },
         success: function(respuestaDelServer,estado) {
             $("#respuesta").removeClass("estiloRecibiendo");
