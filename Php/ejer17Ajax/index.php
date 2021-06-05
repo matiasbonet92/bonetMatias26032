@@ -18,7 +18,7 @@
         </div>
         <div id="div2">
             <h2>Encriptar:</h2>
-            <input type="image" src="C:\Users\Mbonet\Desktop\flecha-derecha.svg" alt="" id="envio">
+            <input type="image" src="./flecha-derecha.svg" alt="" id="envio">
         </div>
         <div id="div3">
             <h3>Resultado:</h3>
@@ -37,16 +37,16 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $("#envio").click(function(){
-            $("div3").empty();
-            $("div3").addClass("estiloRecibiendo");
-            $("div3").html("<h2>Esperando Respuesta ...</h2>");
-            $("div4").empty();
-            $("div4").append("<h2>Estado del Requerimiento</h2>");
+            $("#div3").empty();
+            $("#div3").addClass("estiloRecibiendo");
+            $("#div3").html("<h2>Esperando Respuesta ...</h2>");
+            $("#div4").empty();
+            $("#div4").append("<h2>Estado del Requerimiento</h2>");
 
             $.ajax({
                 type:"post",
                 url:"./respuesta.php",
-                data: {frase: $("frase").val()},
+                data: {frase: $("#frase").val()},
                 success: function(respuestaDelServer,estado) {
                     $("#div3").removeClass("estiloRecibiendo");
                     $("#div3").html("<h1>Resultado: </h1><h4>" + respuestaDelServer + "</h4>"); 

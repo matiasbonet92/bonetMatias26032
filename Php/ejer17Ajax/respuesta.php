@@ -2,8 +2,8 @@
 
         sleep(4);
         
-        if (isset($_POST['frase'])) {
-            $frase = $_POST['frase'];
+        if (isset($_POST["frase"])) {
+            $frase = $_POST["frase"];
             $cencriptadamd5 = md5($frase);
             $cencriptadasha1 = sha1($frase);
 
