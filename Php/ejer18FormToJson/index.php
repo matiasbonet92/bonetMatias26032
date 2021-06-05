@@ -45,7 +45,7 @@
                 </div>
                 <div class="formInternos">
                     <label for="nac">Edad:</label><br>
-                    <input type="date" name="fnac" id="nac" required>
+                    <input type="date" name="fnac" id="nacimiento" required>
                 </div>
                 <div class="formInternos">
                     <input type="submit" name="" id="enviar" value="Enviar">

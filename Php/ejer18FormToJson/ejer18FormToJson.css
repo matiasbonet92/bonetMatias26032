@@ -82,8 +82,8 @@ div#modal{
     top: 10%;
     left: 25%;
     visibility: hidden;
-    width: 50%;
-    height: 80%;
+    width: 60%;
+    height: 82%;
 }
 
 div#modal.modalActiva{
