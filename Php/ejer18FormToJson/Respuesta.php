@@ -7,7 +7,7 @@
         $objDatos->login = $_POST["login"];
         $objDatos->apellido = $_POST["apellido"];
         $objDatos->nombres = $_POST["nombres"];
-        $objDatos->fechaNac = $_POST["nacimiento"];
+        $objDatos->fechaNac = $_POST["fechaNac"];
 
         $jsonObjDatos = json_encode($objDatos);
 
