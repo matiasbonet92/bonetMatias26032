@@ -13,19 +13,20 @@
     </header>
     <div class="contenido">
         <div id="div1">
-            <h1>HOLA</h1>
+            <h2>Dato de Entrada:</h2>
+            <input type="text" name="frase" id="frase" required>
         </div>
         <div id="div2">
-            <h1>HOLA</h1>
+            <h2>Encriptar:</h2>
+            <input type="image" src="C:\Users\Mbonet\Desktop\flecha-derecha.svg" alt="" id="envio">
         </div>
         <div id="div3">
-            <h1>HOLA</h1>
+            <h3>Resultado:</h3>
         </div>
         <div id="div4">
-            <h1>HOLA</h1>
+            <h3>Estado del Requerimiento:</h3>
         </div>
         <div id="div5">
-            <h1>HOLA</h1>
         </div>
     </div>
     <footer>
@@ -36,28 +37,23 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $("#envio").click(function(){
-            $("#form").submit();
+            $("div3").empty();
+            $("div3").addClass("estiloRecibiendo");
+            $("div3").html("<h2>Esperando Respuesta ...</h2>");
+            $("div4").empty();
+            $("div4").append("<h2>Estado del Requerimiento</h2>");
+
+            $.ajax({
+                type:"post",
+                url:"./respuesta.php",
+                data: {frase: $("frase").val()},
+                success: function(respuestaDelServer,estado) {
+                    $("#div3").removeClass("estiloRecibiendo");
+                    $("#div3").html("<h1>Resultado: </h1><h4>" + respuestaDelServer + "</h4>"); 
+                    $("#div4").append("<h4>" + estado + "</h4>");
+                }
+            });
         })
     </script>
-
-<?php  
-        if (isset($_POST['clave'])) {
-            $clave = $_POST["clave"];
-            $cencriptadamd5 = md5($clave);
-            $cencriptadasha1 = sha1($clave);
-
-            echo "<h3 style='margin-left: 50px; margin-top: 50px;'>Clave: $clave </h3>";echo"<br>";
-            echo "<h3 style='margin-left: 50px;'>Clave encriptada en md5 (128 bits o 16 pares de Hexadecimales): $cencriptadamd5</h3>";echo"<br>";echo"<br>";
-            echo "<h3 style='margin-left: 50px;'>Clave: $clave</h3>";echo"<br>";
-            echo "<h3 style='margin-left: 50px;'>Clave encriptada en sha1 (160 bits o 20 pares de Hexadecimales): $cencriptadasha1</h3>";echo"<br>";echo"<br>";
-
-        }else{
-            echo"<br><form method='POST' id='form'>";
-            echo"<label>Ingrese la clave a encriptacion:</label>"; echo"<br>";
-            echo"<input type='text' name='clave' id='clave' required>"; echo"<br>"; echo"<br>";
-            echo"<input type='submit' value='Obtener Encriptacion' id='envio'>";
-            echo"</form>";
-        }
-    ?> 
 </body>
 </html>
