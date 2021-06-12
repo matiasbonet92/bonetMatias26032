@@ -8,7 +8,7 @@ $("#cargarDatos").click(function(){
         data: {},
         success: function(respuestaDelServer,estado) {
             $("#cuerpoTabla").empty();
-            ojbJson = JSON.parse(respuestaDelServer);
+            var ojbJson = JSON.parse(respuestaDelServer);
             ojbJson.jugadores.foreach(function(valor,indice){
                 //creo fila
                 var objTr = document.createElement("tr");
@@ -24,7 +24,7 @@ $("#cargarDatos").click(function(){
                 objTr.appendChild(nombre);
                 //creo tercer dato y agrego a la fila
                 var fnac = document.createElement("td");
-                fnac.setAttribute("campo-dato", "fnac");
+                fnac.setAttribute("campo-dato", "fecha_nacimiento");
                 fnac.innerHTML = valor.fecha_nacimiento;
                 objTr.appendChild(fnac);
                 //creo cuarto dato y agrego a la fila
@@ -44,7 +44,7 @@ $("#cargarDatos").click(function(){
                 objTr.appendChild(edad);
 
                 //coloco en TBody
-                document.getElementById("cuerpoTabla").appendChild(objTr);
+                document.getElementById("#cuerpoTabla").appendChild(objTr);
             });
             $("#registros").html("Numero de Registros: " + ojbJson.cuentaRegistros.length);
         }

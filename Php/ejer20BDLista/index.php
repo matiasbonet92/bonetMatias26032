@@ -20,9 +20,9 @@
             <tr>
                 <th campo-dato="codjug">Codigo Jugador</th>
                 <th campo-dato="nombre">Nombre</th>
-                <th campo-dato="fnac">Fecha de Nacimiento</th>
-                <th campo-dato="pos">Posicion</th>
+                <th campo-dato="fecha_nacimiento">Fecha de Nacimiento</th>
                 <th campo-dato="equipo">Equipo</th>
+                <th campo-dato="activo">Activo</th>
                 <th campo-dato="edad">Edad</th>
             </tr>
         </thead>
