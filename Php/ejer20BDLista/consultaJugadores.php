@@ -1,8 +1,8 @@
 <?php
-    define("SERVER","localhost");
-    define("USUARIO","root");
-    define("PASS","");
-    define("BASE","labo3_basededatos");
+    define("SERVER","bax2kqxnnk1s3idf8ngv-mysql.services.clever-cloud.com");
+    define("USUARIO","ufjr1niricfjywxs");
+    define("PASS","fWotIYy5meVgqF9mPrta");
+    define("BASE","bax2kqxnnk1s3idf8ngv");
 
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
     $sql = "select * from tabla_jugadores";
