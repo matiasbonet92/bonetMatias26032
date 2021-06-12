@@ -7,7 +7,7 @@
     define("BASE","bax2kqxnnk1s3idf8ngv");
 
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
-    $sql = "select * from tabla_jugadores";
+    $sql = "select * from 'tabla_jugadores'";
 
     $resultado=$mysqli->query($sql);
 
