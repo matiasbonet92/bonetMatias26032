@@ -2,7 +2,7 @@ $("#cargarDatos").click(function(){
     $("#cuerpoTabla").empty();
     $("#cuerpoTabla").html("<h2>Esperando Respuesta ...</h2>");
 
-    $.ajax({
+    var objAjax = $.ajax({
         type:"get",
         url:"./consultaJugadores.php",
         data: {},
@@ -47,7 +47,7 @@ $("#cargarDatos").click(function(){
                 document.getElementById("#cuerpoTabla").appendChild(objTr);
             });
             $("#registros").html("Numero de Registros: " + ojbJson.cuentaRegistros);
-            $("input").val(ojbJson.jugadores.nombre);
+            $("#input").val(ojbJson.jugadores.nombre);
         }
     });
 });
