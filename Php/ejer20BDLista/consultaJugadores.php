@@ -9,10 +9,7 @@
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
     $sql = "select * from tabla_jugadores";
 
-    if (!($resultado=$mysqli->query($sql))) {
-        echo "ERROR!";
-        die();
-    }
+    $resultado=$mysqli->query($sql);
 
     $cantidadRegistrosResultado = $resultado->num_rows;
 

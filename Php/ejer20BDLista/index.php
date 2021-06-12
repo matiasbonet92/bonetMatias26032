@@ -11,7 +11,7 @@
     <div class="cabeceraTabla">
         <header>Tabla de datos de Jugadores</header>
         <label for="orden">Orden:</label><br>
-        <input type="text" readonly>
+        <input type="text" readonly id="input">
         <button id="cargarDatos">Cargar Datos</button>
         <button id="vaciar">Vaciar Datos</button>
     </div>

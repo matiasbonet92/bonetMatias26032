@@ -101,9 +101,9 @@ table tbody{
 
 thead [campo-dato="codjug"],
 thead [campo-dato="nombre"],
-thead [campo-dato="fnac"],
-thead [campo-dato="pos"],
+thead [campo-dato="fecha_nacimiento"],
 thead [campo-dato="equipo"],
+thead [campo-dato="activo"],
 thead [campo-dato="edad"] {
     width: 15%;
     height: 10%;
@@ -125,9 +125,9 @@ table tbody tr:nth-child(odd){
 
 tbody [campo-dato="codjug"],
 tbody [campo-dato="nombre"],
-tbody [campo-dato="fnac"],
-tbody [campo-dato="posicion"],
+tbody [campo-dato="fecha_nacimiento"],
 tbody [campo-dato="equipo"],
+tbody [campo-dato="activo"],
 tbody [campo-dato="edad"] {
     width: 300px;
     height: 35px;
