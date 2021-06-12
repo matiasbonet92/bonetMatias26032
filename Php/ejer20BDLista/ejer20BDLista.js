@@ -46,7 +46,7 @@ $("#cargarDatos").click(function(){
                 //coloco en TBody
                 document.getElementById("#cuerpoTabla").appendChild(objTr);
             });
-            $("#registros").html("Numero de Registros: " + ojbJson.cuentaRegistros.length);
+            $("#registros").html("Numero de Registros: " + ojbJson.cuentaRegistros);
             $("input").val(ojbJson.jugadores.nombre);
         }
     });
