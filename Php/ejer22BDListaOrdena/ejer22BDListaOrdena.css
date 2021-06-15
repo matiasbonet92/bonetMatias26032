@@ -8,6 +8,10 @@ body,html{
 
 /*-----------------------------------------------------------------------------------------------------------------------------*/
 /*diseño tabla*/
+#codjug,#nombre,#fnac,#edad,#activo,#equipo{
+    cursor: pointer;
+}
+
 .cabeceraTabla{
     margin: auto;
     width: 100%;

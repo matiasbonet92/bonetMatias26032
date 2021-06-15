@@ -1,16 +1,56 @@
 $(document).ready(function(){
-    $("#input").val("nombre");
+    $("#orden").val("nombre");
+    $("#codjug").click(function(){
+        $("#orden").val("codjug");
+        cargaTabla();
+    });
+    $("#nombre").click(function(){
+        $("#orden").val("nombre");
+        cargaTabla();
+    });
+    $("#fnac").click(function(){
+        $("#orden").val("fecha_nacimiento");
+        cargaTabla();
+    });
+    $("#equipo").click(function(){
+        $("#orden").val("equipo");
+        cargaTabla();
+    });
+    $("#activo").click(function(){
+        $("#orden").val("activo");
+        cargaTabla();
+    });
+    $("#edad").click(function(){
+        $("#orden").val("edad");
+        cargaTabla();
+    });
 });
 
 $("#cargarDatos").click(function(){
+    cargaTabla();
+});
+
+$("#vaciar").click(function(){
+    $("#cuerpoTabla").empty();
+    $("#registros").empty();
+});
+
+function cargaTabla(){
     $("#cuerpoTabla").empty();
     $("#cuerpoTabla").html("<h2>Esperando Respuesta ...</h2>");
-    $("#input").val("nombre");
 
     var objAjax = $.ajax({
         type:"get",
         url:"./consultaJugadores.php",
-        data: {},
+        data: 
+        {   orden: $("#orden").val(), 
+            filtro_codigo: $("#inputCodJug").val(),
+            filtro_nombre: $("#inputNombre").val(),
+            filtro_fnac: $("#inputFNac").val(),
+            filtro_equipo: $("#inputEquipo").val(),
+            filtro_activo: $("#inputActivo").val(),
+            filtro_edad: $("#inputEdad").val(),
+        },
         success: function(respuestaDelServer,estado) {
             console.log(respuestaDelServer);
             $("#cuerpoTabla").empty();
@@ -55,9 +95,4 @@ $("#cargarDatos").click(function(){
             $("#registros").html("Numero de Registros: " + ojbJson.cuentaRegistros);
         }
     });
-});
-
-$("#vaciar").click(function(){
-    $("#cuerpoTabla").empty();
-    $("#registros").empty();
-});
+}

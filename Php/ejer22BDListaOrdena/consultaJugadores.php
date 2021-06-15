@@ -7,8 +7,9 @@
     define("BASE","labo3_basededatos");
 
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
-    $sql = "select * from tabla_jugadores";
-
+    $orden = $_GET["orden"];
+    $sql = "select * from tabla_jugadores order by " . $orden;
+    
     if( ! ($resultado=$mysqli->query($sql)) ){
         die();
     };
