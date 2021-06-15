@@ -81,7 +81,7 @@ table thead{
 table tbody{
     display: block;
     width: 100%;
-    height: 80%;
+    height: 75%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -223,7 +223,7 @@ table thead tr th input{
     table tbody{
         display: block;
         width: 100%;
-        height: 75%;
+        height: 65%;
         overflow-y: scroll;
         overflow-x: hidden;
     }
