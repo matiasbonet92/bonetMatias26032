@@ -332,7 +332,7 @@ div#contenedorBase table thead tr th input{
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------*/
-/*Diseño modal*/
+/*Diseño modal Alta*/
 
 
 /*diseño contenedor base*/
@@ -364,66 +364,33 @@ div#contenedorBase table thead tr th input{
     cursor: pointer;
 }
 
-/*diseño acciones en los click*/
-div#contenedor{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-div#contenedor.contDesactivo{
-    opacity: 0.3;
-    pointer-events: none;
-}
-
-div#modal{
-    position: fixed;
-    top: 30%;
-    left: 25%;
-    visibility: hidden;
-    width: 50%;
-    height: 50%;
-}
-
-div#modal.modalActiva{
-    visibility: visible;
-}
-
-div#modal.modalDesactivo{
-    visibility: hidden;
-}
-
-div#modal.contActivo{
-    opacity: 1;
-    pointer-events: auto;
-}
-
 /*diseño modal*/
-#modal{
+#modalAlta{
     border: solid 3px black;
     border-radius: 24px;
 }
 
-.cabeceraFormulario{
+.cabeceraFormularioAlta{
     margin: auto;
-    height: 10%;
+    height: 15%;
     background-color: teal;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.cabeceraFormulario header{
+.cabeceraFormularioAlta header{
     width: 94%;
     text-align: center;
     text-decoration: underline;
-    font-size: 15px;
+    font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     box-sizing: border-box;
-    padding-top: 5px;
+    padding-top: 15px;
     float: left;
 }
 
-.cabeceraFormulario button{
+.cabeceraFormularioAlta button{
     width: 6%;
     height: 100%;
     color: whitesmoke;
@@ -435,15 +402,15 @@ div#modal.contActivo{
     border-top-right-radius: 20px;
 }
 
-.formulario{
+.formularioAlta{
     margin: auto;
-    height: 80%;
+    height: 70%;
     background-color: whitesmoke;
 }
 
-.pieFormulario{
+.pieFormularioAlta{
     margin: auto;
-    height: 10%;
+    height: 15%;
     background-color: teal;
     text-align: center;
     text-decoration: underline;
@@ -456,7 +423,7 @@ div#modal.contActivo{
     border-bottom-right-radius: 20px;
 }
 
-.formulario form{
+.formularioAlta{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -467,20 +434,20 @@ div#modal.contActivo{
     padding-left: 10px;
 }
 
-.formulario form .formInternos{
+.formularioAlta .formInternos{
     max-width: 100%;
     width: 30%;
     max-height: 100%;
     height: 100px;
 }
 
-.formulario form .formInternos label{
+.formularioAlta .formInternos label{
     font-size: 15px;
     font-weight: bold;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.formulario form .formInternos input , .formulario form .formInternos select{
+.formularioAlta .formInternos input , .formularioAlta .formInternos select{
     height: 30px;
     box-sizing: border-box;
     margin-top: 10px;
@@ -491,9 +458,246 @@ div#modal.contActivo{
     color: whitesmoke;
 }
 
-.formulario form .formInternos #enviar{
+.formularioAlta .formInternos #enviar{
     height: 30px;
     margin-top: -10px;
     margin-left: 70px;
     cursor: pointer;
 }
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*Diseño modal Baja*/
+
+/*diseño modal*/
+#modalModificacion{
+    border: solid 3px black;
+    border-radius: 24px;
+}
+
+.cabeceraFormularioModificacion{
+    margin: auto;
+    height: 15%;
+    background-color: teal;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cabeceraFormularioModificacion header{
+    width: 94%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 15px;
+    float: left;
+}
+
+.cabeceraFormularioModificacion button{
+    width: 6%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    background-color: red;
+    border: solid 1px black;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+}
+
+.formularioModificacion{
+    margin: auto;
+    height: 70%;
+    background-color: whitesmoke;
+}
+
+.pieFormularioModificacion{
+    margin: auto;
+    height: 15%;
+    background-color: teal;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.formularioModificacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.formularioModificacion .formInternos{
+    max-width: 100%;
+    width: 30%;
+    max-height: 100%;
+    height: 100px;
+}
+
+.formularioModificacion .formInternos label{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.formularioModificacion .formInternos input , .formularioModificacion .formInternos select{
+    height: 30px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    background-color: teal;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.formularioModificacion .formInternos #enviar{
+    height: 30px;
+    margin-top: -10px;
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*Diseño modal Respuestas*/
+
+/*diseño modal*/
+#modalRespuesta{
+    border: solid 3px black;
+    border-radius: 24px;
+}
+
+#modalRespuesta .cabeceraRespuesta{
+    margin: auto;
+    height: 15%;
+    background-color: teal;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#modalRespuesta .cabeceraRespuesta header{
+    width: 94%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 15px;
+    float: left;
+}
+
+#modalRespuesta .cabeceraRespuesta button{
+    width: 6%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    background-color: red;
+    border: solid 1px black;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+}
+
+#modalRespuesta .bodyRespuesta{
+    margin: auto;
+    height: 70%;
+    background-color: whitesmoke;
+}
+
+#modalRespuesta .pieRespuesta{
+    margin: auto;
+    height: 15%;
+    background-color: teal;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+/*diseño acciones en los click Alta */
+div#contenedorBase{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+div#contenedorBase.contDesactivo{
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+div#modalAlta{
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    visibility: hidden;
+    width: 60%;
+    height: 60%;
+}
+
+div#modalAlta.modalActiva{
+    visibility: visible;
+}
+
+div#modalAlta.modalDesactivo{
+    visibility: hidden;
+}
+
+div#modalAlta.contActivo{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*diseño acciones en los click Modificacion*/
+div#contenedorBase{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+div#contenedorBase.contenedorDesBase{
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+div#modalModificacion{
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    visibility: hidden;
+    width: 60%;
+    height: 60%;
+}
+
+div#modalModificacion.modalModifActivo{
+    visibility: visible;
+}
+
+div#modalModificacion.modalDesModificacion{
+    visibility: hidden;
+}
+
+div#modalModificacion.contActivoModificacion{
+    opacity: 1;
+    pointer-events: auto;
+}
+

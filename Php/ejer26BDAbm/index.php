@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>php22BDListaOrdena</title>
+    <title>php26ABM</title>
     <link rel="stylesheet" href="./ejer26BDAbm.css">
 </head>
 <body>
@@ -67,43 +67,91 @@
 
     <!-- Diseño Contenedor Modal Alta Registros -->
 
-    <div id="modal">
-        <div class="cabeceraFormulario">
+    <div id="modalAlta">
+        <div class="cabeceraFormularioAlta">
             <header>Formulario de alta de Jugadores - MASTER Jugadores</header>
-            <button id="cerrar">X</button>
+            <button id="cerrarAlta">X</button>
         </div>
-        <div class="formulario">
-            <form action="./Respuesta.html" method="GET" id="form">
-                <div class="formInternos">
-                    <label for="codjug">Codigo Jugador:</label><br>
-                    <input type="text" name="codjug" id="codjug" required>
-                </div>
-                <div class="formInternos">
-                    <label for="nombre">Nombre Completo:</label><br>
-                    <input type="text" name="nombrejug" id="nombre" required>
-                </div>
-                <div class="formInternos">
-                    <label for="nac">Fecha de Nacimiento:</label><br>
-                    <input type="date" name="nacimiento" id="nac" required>
-                </div>
-                <div class="formInternos">
-                    <label for="equipo">Equipo:</label><br>
-                    <select name="equipo" id="equipo" required></select>
-                </div>
-                <div class="formInternos">
-                    <label for="activo">Activo:</label><br>
-                    <input type="text" name="activo" id="activo" placeholder="SI / NO" required>
-                </div>
-                <div class="formInternos">
-                    <label for="edad">Edad:</label><br>
-                    <input type="number" min="18" name="edad" id="edad" required>
-                </div>
-                <div class="formInternos">
-                    <input type="submit" name="" id="enviar" value="Enviar">
-                </div>
-            </form>
+        <div class="formularioAlta">
+            <div class="formInternos">
+                <label for="codjug">Codigo Jugador:</label><br>
+                <input type="text" name="codjug" id="codjugAlta" required>
+            </div>
+            <div class="formInternos">
+                <label for="nombre">Nombre Completo:</label><br>
+                <input type="text" name="nombrejug" id="nombreAlta" required>
+            </div>
+            <div class="formInternos">
+                <label for="nac">Fecha de Nacimiento:</label><br>
+                <input type="date" name="nacimiento" id="nacAlta" required>
+            </div>
+            <div class="formInternos">
+                <label for="equipo">Equipo:</label><br>
+                <select name="equipo" id="equipoAlta" required></select>
+            </div>
+            <div class="formInternos">
+                <label for="activo">Activo:</label><br>
+                <input type="text" name="activo" id="activoAlta" placeholder="SI / NO" required>
+            </div>
+            <div class="formInternos">
+                <label for="edad">Edad:</label><br>
+                <input type="number" min="18" name="edad" id="edadAlta" required>
+            </div>
+            <div class="formInternos">
+                <input type="submit" name="" id="enviarAlta" value="Enviar">
+            </div>
         </div>    
-        <footer class="pieFormulario">Pie del formulario</footer>
+        <footer class="pieFormularioAlta">Pie del formulario</footer>
+    </div>
+
+    <!-- Diseño Contenedor Modal Mofificacion Registros -->
+
+    <div id="modalModificacion">
+        <div class="cabeceraFormularioModificacion">
+            <header>Formulario de Mofificaccion de Jugadores - MASTER Jugadores</header>
+            <button id="cerrarModif">X</button>
+        </div>
+        <div class="formularioModificacion">
+            <div class="formInternos">
+                <label for="codjug">Codigo Jugador:</label><br>
+                <input type="text" name="codjug" id="codjugModificacion" required>
+            </div>
+            <div class="formInternos">
+                <label for="nombre">Nombre Completo:</label><br>
+                <input type="text" name="nombrejug" id="nombreModificacion" required>
+            </div>
+            <div class="formInternos">
+                <label for="nac">Fecha de Nacimiento:</label><br>
+                <input type="date" name="nacimiento" id="nacModificacion" required>
+            </div>
+            <div class="formInternos">
+                <label for="equipo">Equipo:</label><br>
+                <select name="equipo" id="equipoModificacion" required></select>
+            </div>
+            <div class="formInternos">
+                <label for="activo">Activo:</label><br>
+                <input type="text" name="activo" id="activoModificacion" placeholder="SI / NO" required>
+            </div>
+            <div class="formInternos">
+                <label for="edad">Edad:</label><br>
+                <input type="number" min="18" name="edad" id="edadModificacion" required>
+            </div>
+            <div class="formInternos">
+                <input type="submit" name="" id="enviarModificacion" value="Enviar">
+            </div>
+        </div>    
+        <footer class="pieFormularioModificacion">Pie del formulario</footer>
+    </div>
+
+    <!-- Diseño Contenedor Modal Respuestas -->
+
+    <div id="modalRespuesta">
+        <div class="cabeceraRespuesta">
+            <header>Respuesta del Servidor</header>
+            <button id="cerrarRespuesta">X</button>
+        </div>
+        <div class="bodyRespuesta"></div>    
+        <footer class="pieRespuesta">Pie del formulario</footer>
     </div>
 
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
