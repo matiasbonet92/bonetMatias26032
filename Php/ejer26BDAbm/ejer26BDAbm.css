@@ -100,7 +100,7 @@ div#contenedorBase table thead{
 div#contenedorBase table tbody{
     display: block;
     width: 100%;
-    height: 74%;
+    height: 70%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
