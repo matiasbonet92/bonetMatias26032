@@ -98,6 +98,10 @@
                 <input type="number" min="18" name="edad" id="edadAlta" required>
             </div>
             <div class="formInternos">
+                <label for="pdf">PDF:</label><br>
+                <input type="file" name="pdf" id="pdfAlta" required>
+            </div>
+            <div class="formInternos">
                 <input type="submit" name="" id="enviarAlta" value="Enviar">
             </div>
         </div>    
@@ -108,37 +112,43 @@
 
     <div id="modalModificacion">
         <div class="cabeceraFormularioModificacion">
-            <header>Formulario de Mofificaccion de Jugadores - MASTER Jugadores</header>
+            <header>Formulario de Modificacion de Jugadores - MASTER Jugadores</header>
             <button id="cerrarModif">X</button>
         </div>
         <div class="formularioModificacion">
-            <div class="formInternos">
-                <label for="codjug">Codigo Jugador:</label><br>
-                <input type="text" name="codjug" id="codjugModificacion" required>
-            </div>
-            <div class="formInternos">
-                <label for="nombre">Nombre Completo:</label><br>
-                <input type="text" name="nombrejug" id="nombreModificacion" required>
-            </div>
-            <div class="formInternos">
-                <label for="nac">Fecha de Nacimiento:</label><br>
-                <input type="date" name="nacimiento" id="nacModificacion" required>
-            </div>
-            <div class="formInternos">
-                <label for="equipo">Equipo:</label><br>
-                <select name="equipo" id="equipoModificacion" required></select>
-            </div>
-            <div class="formInternos">
-                <label for="activo">Activo:</label><br>
-                <input type="text" name="activo" id="activoModificacion" placeholder="SI / NO" required>
-            </div>
-            <div class="formInternos">
-                <label for="edad">Edad:</label><br>
-                <input type="number" min="18" name="edad" id="edadModificacion" required>
-            </div>
-            <div class="formInternos">
-                <input type="submit" name="" id="enviarModificacion" value="Enviar">
-            </div>
+            <form id="formPost" method="post" enctype="multipart/form-data">
+                <div class="formInternos">
+                    <label for="codjug">Codigo Jugador:</label><br>
+                    <input type="text" name="codjug" id="codjugModificacion" required>
+                </div>
+                <div class="formInternos">
+                    <label for="nombre">Nombre Completo:</label><br>
+                    <input type="text" name="nombrejug" id="nombreModificacion" required>
+                </div>
+                <div class="formInternos">
+                    <label for="nac">Fecha de Nacimiento:</label><br>
+                    <input type="date" name="nacimiento" id="nacModificacion" required>
+                </div>
+                <div class="formInternos">
+                    <label for="equipo">Equipo:</label><br>
+                    <select name="equipo" id="equipoModificacion" required></select>
+                </div>
+                <div class="formInternos">
+                    <label for="activo">Activo:</label><br>
+                    <input type="text" name="activo" id="activoModificacion" placeholder="SI / NO" required>
+                </div>
+                <div class="formInternos">
+                    <label for="edad">Edad:</label><br>
+                    <input type="number" min="18" name="edad" id="edadModificacion" required>
+                </div>
+                <div class="formInternos">
+                    <label for="pdf">PDF:</label><br>
+                    <input type="file" name="pdf" id="pdfModificacion" required>
+                </div>
+                <div class="formInternos">
+                    <input type="submit" name="" id="enviarModificacion" value="Enviar">
+                </div>
+            </form>
         </div>    
         <footer class="pieFormularioModificacion">Pie del formulario</footer>
     </div>
@@ -150,7 +160,7 @@
             <header>Respuesta del Servidor</header>
             <button id="cerrarRespuesta">X</button>
         </div>
-        <div class="bodyRespuesta"></div>    
+        <div id="bodyRespuesta"></div>    
         <footer class="pieRespuesta">Pie del formulario</footer>
     </div>
 

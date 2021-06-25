@@ -1,18 +1,18 @@
 <?php
 
-    define("SERVER","localhost");
-    define("USUARIO","root");
-    define("PASS","");
-    define("BASE","labo3_basededatos");
+    define("SERVER","bax2kqxnnk1s3idf8ngv-mysql.services.clever-cloud.com");
+    define("USUARIO","ufjr1niricfjywxs");
+    define("PASS","fWotIYy5meVgqF9mPrta");
+    define("BASE","bax2kqxnnk1s3idf8ngv");
 
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
 
-    $codjug = $_GET['codjug'];
-    $nombre = $_GET['nombre'];
-    $fnac = $_GET['fnac'];
-    $equipo = $_GET['equipo'];
-    $activo = $_GET['activo'];
-    $edad = $_GET['edad'];
+    $codjug = $_POST['codjug'];
+    $nombre = $_POST['nombre'];
+    $fnac = $_POST['fnac'];
+    $equipo = $_POST['equipo'];
+    $activo = $_POST['activo'];
+    $edad = $_POST['edad'];
 
     $sql = "update tabla_jugadores set codjug=?,nombre=?,fecha_nacimiento=?,equipo=?,activo=?,edad=? where codjug=?";
     

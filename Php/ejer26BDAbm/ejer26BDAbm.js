@@ -3,7 +3,9 @@ $(document).ready(function(){
     objCodArt = document.getElementById('codjugAlta');
     objNombre = document.getElementById('nombreAlta');
     $("#enviarAlta").attr("disabled",true);
-    $("#modalRespuesta").class("visibility","hidden");
+    $("#modalRespuesta").css("visibility","hidden");
+
+    
 
     //dato inicial de orden
     $("#orden").val("nombre");
@@ -79,6 +81,10 @@ $("#cerrarModif").click(function(){
     document.getElementById('contenedorBase').className="contActivoModificacion";
 });
 
+$("#cerrarRespuesta").click(function(){
+    $("#modalRespuesta").css("visibility","hidden");
+});
+
 //funcion de carga de tabla
 function cargaTabla(){
     $("#cuerpoTabla").empty();
@@ -137,6 +143,9 @@ function cargaTabla(){
                 var pdf = document.createElement("td");
                 pdf.setAttribute("campo-dato", "pdf");
                 pdf.innerHTML = "<button id='pdf' style='padding: 10px; cursor:pointer;'>PDF</button>";
+                pdf.onclick=function(){
+                    cargarPdf(valor.codjug);
+                }
                 objTr.appendChild(pdf);
                 //creo Modif boton y agrego a la fila
                 var mod = document.createElement("td");
@@ -172,8 +181,9 @@ function cargaTabla(){
 //funcion modificacion
 function modificacion(valor){
     var codjug = valor;
+
     var objAjax = $.ajax({
-        type:"get",
+        type:"post",
         url:"./modificacion.php",
         data: 
         {
@@ -182,7 +192,7 @@ function modificacion(valor){
             fnac: $("#nacModificacion").val(),
             equipo: $("#equipoModificacion").val(),
             activo: $("#activoModificacion").val(),
-            edad: $("#edadModificacion").val()
+            edad: $("#edadModificacion").val(),
         }
     });
     cargaTabla();
@@ -271,7 +281,8 @@ function alta(){
             fnac: $("#nacAlta").val(),
             equipo: $("#equipoAlta").val(),
             activo: $("#activoAlta").val(),
-            edad: $("#edadAlta").val()
+            edad: $("#edadAlta").val(),
+            pdf: $("#pdfAlta").val(),
         }
     });
 
@@ -290,5 +301,25 @@ function baja(codigo){
     });
 
     cargaTabla();
+}
+
+//funcion Carga PDF
+function cargarPdf(codigo){
+    var objAjax = $.ajax({
+        type:"get",
+        url:"./datosDoc.php",
+        data: 
+        {
+            codjug: codigo
+        },
+        success: function(respuestaDelServer){
+            console.log(respuestaDelServer);
+            objPdf = JSON.parse(respuestaDelServer);
+            console.log(respuestaDelServer);
+            $("#modalRespuesta").css("visibility","visible");
+            $("#bodyRespuesta").empty();
+            $("#bodyRespuesta").html("<iframe width='100%' height='300px' src='data:application/pdf;base64,"+objPdf.documentoPdf+"'></iframe>");
+        }
+    });
 }
 
