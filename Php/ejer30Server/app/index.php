@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./ejer26BDAbm.css">
 </head>
 <body>
+    <?php
+        include('../manejoSesion.inc');
+    ?>
+    
     <!-- Diseño Contenedor Base -->
     <div id="contenedorBase">
         <div class="cabeceraTabla">
@@ -17,6 +21,7 @@
             <button id="cargarDatos">Cargar Datos</button>
             <button id="vaciar">Vaciar Datos</button>
             <button id="alta">Alta Registro</button>
+            <button id="btCierraSesion">Cierra Sesión</button>
         </div>
         <table id="tabla">
             <thead>

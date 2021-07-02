@@ -1,4 +1,9 @@
 <?php
+    include('../manejoSesion.inc');
+?>
+<?php
+
+    sleep(2);
 
     define("SERVER","bax2kqxnnk1s3idf8ngv-mysql.services.clever-cloud.com");
     define("USUARIO","ufjr1niricfjywxs");

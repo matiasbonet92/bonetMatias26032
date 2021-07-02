@@ -1,46 +1,26 @@
 <?php
-    include('../manejoSesion.inc');
-?>
-<?php
 
     define("SERVER","bax2kqxnnk1s3idf8ngv-mysql.services.clever-cloud.com");
     define("USUARIO","ufjr1niricfjywxs");
     define("PASS","fWotIYy5meVgqF9mPrta");
     define("BASE","bax2kqxnnk1s3idf8ngv");
-    
+
     //apertura de conexion con la base de datos para datos que no son blob
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
 
     //creo variables con los datos
-    $codjug = $_POST['codjug'];
-    $nombre = $_POST['nombrejug'];
-    $fnac = $_POST['nacimiento'];
-    $equipo = $_POST['equipo'];
-    $activo = $_POST['activo'];
-    $edad = $_POST['edad'];
+    $id = $_GET['id'];
+    $pass = $_GET['pass'];
 
-    //creo variables con los datos
-    if ( ! isset($_FILES['pdf'] )) {
-        $respuesta = $respuesta . "<br/> No esta inicializada la variable:";
-    }else{
-        if ( empty($_FILES['pdf']['name']) ) {
-            $respuesta = $respuesta . "<br/> No ha sido ningun archivo para enviar!";
-        }else{
-            $respuesta = $respuesta . "<br/> Trae PDF asociado a codJug:" . $codjug;
-            $respuesta = $respuesta . "<br/> Nombre original del archivo subido:" . $_FILES['pdf']['name'];
-            $contenidoPdf = file_get_contents($_FILES['pdf']['tmp_name']);
-        }
-    }
+    $sql = "select * from usuarios where id LIKE ? and pass LIKE ?";
 
-    $sql = "update tabla_jugadores set codjug=?,nombre=?,fecha_nacimiento=?,equipo=?,activo=?,edad=?,pdf=? where codjug=?";
-    
     $respuesta = "";
 
     if ( ! ($sentencia = $mysqli->prepare($sql)) ) {
         $respuesta = $respuesta . "<br/> Fallo la preparacion del Template: ('. $mysqli->errno .') " . $mysqli->error;
     }else{
 
-        if ( ! $sentencia->bind_param('sssssiss',$codjug,$nombre,$fnac,$equipo,$activo,$edad,$contenidoPdf,$codjug) ) {
+        if ( ! $sentencia->bind_param('ss',$id,$pass) ) {
             $respuesta = $respuesta . "<br/>Falló la vinculación de parámetros simples: (' . $sentencia->errno . ') " . $sentencia->error;
         }else{
             if ( ! $sentencia->execute() ) {
@@ -50,6 +30,15 @@
                 $respuesta = $respuesta . "<br/>Datos obtenidos!";
                 $resultado = $sentencia->get_result(); 
             }
+        }
+    }
+
+    while($fila = $resultado->fetch_assoc()){
+        if ( ! $fila['id'] == $id && $fila['pass'] == $pass) {
+            header('Location: ./formularioDeLogin.html'); 
+            exit();
+        }else{
+            header('Location: ./app'); 
         }
     }
 

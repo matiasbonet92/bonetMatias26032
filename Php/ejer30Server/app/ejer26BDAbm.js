@@ -40,6 +40,11 @@ $(document).ready(function(){
     $("#codjugAlta").keyup(function(){
         validacionKeyup();
     });
+
+    //cierro sesion
+    $("#btCierraSesion").click(function() {
+        location.href='../destruirsesion.php';
+    });
 });
 
 //carga tabla
@@ -276,6 +281,7 @@ function alta(){
         cache: false,
         data: data,
     });
+    cargaTabla();
 }
 
 //funcion baja

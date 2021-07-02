@@ -1,0 +1,82 @@
+/*diseño general*/
+body,html{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*diseño tabla*/
+.cabecera{
+    margin: auto;
+    height: 10%;
+    background-color: teal;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.cabeceraTabla header{
+    width: 70%;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.cuerpo{
+    width: 100%;
+    height: 80%;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    padding-left: 42%;
+    padding-top: 9%;
+}
+
+.cuerpo label{
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.cuerpo input{
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.cuerpo button{
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pie{
+    margin: auto;
+    height: 10%;
+    background-color: teal;
+    text-align: center;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+.pie a{
+    font-size: 15px;
+    align-items: center;
+}
