@@ -1,7 +1,6 @@
 $("#ingresar").click(function(){
     var ajax = $.ajax({
-        type: 'post',
-        method: 'post',
+        type: 'get',
         url: './ingresoAlSistema.php',
         data: {
             id: $("#login").val(),
