@@ -4,5 +4,7 @@
     If(!isset($_SESSION['identificativoDeSesion'])) {
         header('location:./login.html');
         exit();
+    }else{
+        header('location: ./app');
     }
 ?>

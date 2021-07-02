@@ -86,6 +86,7 @@ $("#cerrarRespuesta").click(function(){
     $("#modalRespuesta").css("visibility","hidden");
 });
 
+
 //funcion de carga de tabla
 function cargaTabla(){
     $("#cuerpoTabla").empty();
