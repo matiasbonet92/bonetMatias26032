@@ -43,7 +43,7 @@ $(document).ready(function(){
 
     //cierro sesion
     $("#btCierraSesion").click(function() {
-        location.href='../destruirsesion.php';
+        location.href='../destruirSesion.php';
     });
 });
 
