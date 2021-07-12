@@ -1,5 +1,10 @@
 <?php
-    include('../manejoSesion.inc');
+    session_start();
+
+    if(!isset($_SESSION['identificativoDeSesion'])) {
+        header('location:../login.html');
+        exit();
+    }
 ?>
 <?php
     sleep(2);

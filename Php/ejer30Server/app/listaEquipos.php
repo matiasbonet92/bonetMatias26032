@@ -1,5 +1,10 @@
 <?php
-    include('../manejoSesion.inc');
+    session_start();
+
+    if(!isset($_SESSION['identificativoDeSesion'])) {
+        header('location:../login.html');
+        exit();
+    }
 ?>
 <?php
     define("SERVER","bax2kqxnnk1s3idf8ngv-mysql.services.clever-cloud.com");
@@ -8,7 +13,7 @@
     define("BASE","bax2kqxnnk1s3idf8ngv");
 
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
-    $sql = "select equipo from tabla_jugadores";
+    $sql = "select * from equipos";
 
     if( ! ($resultado=$mysqli->query($sql)) ){
         die();
@@ -18,7 +23,7 @@
 
     while($fila = $resultado->fetch_assoc()){
         $objEquipo = new stdClass();
-        $objEquipo->equipo=$fila['equipo'];
+        $objEquipo->equipo=$fila['nombre_equipo'];
         array_push($equipos,$objEquipo);
     }
 

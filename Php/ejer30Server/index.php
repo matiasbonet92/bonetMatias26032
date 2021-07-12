@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    If(!isset($_SESSION['identificativoDeSesion'])) {
-        header('location:./login.html');
+    if(!isset($_SESSION['usuario'])) {
+        header('location: ./login.html');
         exit();
     }else{
         header('location: ./app');
