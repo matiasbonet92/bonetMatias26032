@@ -75,6 +75,7 @@ $("#enviarAlta").click(function(){
 $("#cerrarAlta").click(function(){
     document.getElementById('modalAlta').className="modalDesactivo";
     document.getElementById('contenedorBase').className="contActivo";
+    $("#codjugAlta").empty();
 });
 
 $("#cerrarModif").click(function(){
