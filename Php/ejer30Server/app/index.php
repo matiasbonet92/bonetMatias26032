@@ -33,7 +33,7 @@
                 <tr>
                     <th campo-dato="codjug" id="codjug">Codigo Jugador</th>
                     <th campo-dato="nombre" id="nombre">Nombre</th>
-                    <th campo-dato="fecha_nacimiento" id="fnac">Fecha de Nacimiento</th>
+                    <th campo-dato="fecha_nacimiento" id="fnac">F.Nac</th>
                     <th campo-dato="equipo" id="equipo">Equipo</th>
                     <th campo-dato="activo" id="activo">Activo</th>
                     <th campo-dato="edad" id="edad">Edad</th>
