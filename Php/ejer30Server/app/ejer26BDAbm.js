@@ -151,7 +151,7 @@ function cargaTabla(){
                 //creo PDF boton y agrego a la fila
                 var pdf = document.createElement("td");
                 pdf.setAttribute("campo-dato", "pdf");
-                pdf.innerHTML = "<button id='pdf' style='padding: 10px; cursor:pointer;'>PDF</button>";
+                pdf.innerHTML = "<button id='pdf' style='cursor:pointer;'>PDF</button>";
                 pdf.onclick=function(){
                     cargarPdf(valor.codjug);
                 }
@@ -159,7 +159,7 @@ function cargaTabla(){
                 //creo Modif boton y agrego a la fila
                 var mod = document.createElement("td");
                 mod.setAttribute("campo-dato", "modificacion");
-                mod.innerHTML = "<button id='change' style='padding: 10px; cursor:pointer;'>Modificacion</button>";
+                mod.innerHTML = "<button id='change' style='cursor:pointer;'>Modi</button>";
                 mod.onclick=function(){
                     $("#contenedorBase").addClass("contenedorDesBase");
                     $("#modalModificacion").addClass("modalModifActivo");
@@ -174,7 +174,7 @@ function cargaTabla(){
                 //creo Elim boton y agrego a la fila
                 var elim = document.createElement("td");
                 elim.setAttribute("campo-dato", "eliminar");
-                elim.innerHTML = "<button id='delete' style='padding: 10px; cursor:pointer;'>Eliminacion</button>";
+                elim.innerHTML = "<button id='delete' style='cursor:pointer;'>Baja</button>";
                 elim.onclick=function(){
                     baja(valor.codjug);
                 }

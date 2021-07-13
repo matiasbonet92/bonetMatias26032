@@ -38,8 +38,8 @@
                     <th campo-dato="activo" id="activo">Activo</th>
                     <th campo-dato="edad" id="edad">Edad</th>
                     <th campo-dato="edad" id="pdf">PDF</th>
-                    <th campo-dato="edad" id="modificacion">Modificacion</th>
-                    <th campo-dato="edad" id="eliminar">Eliminar</th>
+                    <th campo-dato="edad" id="modificacion">Modi</th>
+                    <th campo-dato="edad" id="eliminar">Baja</th>
                 </tr>
                 <tr>
                     <th campo-dato="codjug">
