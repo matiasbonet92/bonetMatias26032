@@ -321,7 +321,7 @@ function cargarPdf(codigo){
             console.log(respuestaDelServer);
             $("#modalRespuesta").css("visibility","visible");
             $("#bodyRespuesta").empty();
-            $("#bodyRespuesta").html("<iframe width='100%' height='300px' src='data:application/pdf;base64,"+objPdf.documentoPdf+"'></iframe>");
+            $("#bodyRespuesta").html("<iframe width='100%' height='100%' src='data:application/pdf;base64,"+objPdf.documentoPdf+"'></iframe>");
         }
     });
 }
