@@ -796,6 +796,7 @@ div#modalRespuesta{
 
     div#modalAlta .formularioAlta form{
         margin: auto;
+        width: 100%;
         height: 70%;
         background-color: whitesmoke;
         display: flex;
@@ -804,8 +805,8 @@ div#modalRespuesta{
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        padding-top: 10px;
-        padding-left: 10px;
+        padding-top: 2px;
+        padding-left: 2px;
     }
 
     div#modalAlta .pieFormularioAlta{
@@ -827,7 +828,7 @@ div#modalRespuesta{
         max-width: 100%;
         width: 28%;
         max-height: 100%;
-        height: 80px;
+        height: 50px;
     }
 
     .formularioAlta form .formInternos label{
@@ -849,8 +850,6 @@ div#modalRespuesta{
 
     .formularioAlta form .formInternos #enviarAlta{
         height: 30px;
-        margin-top: 30px;
-        margin-left: 50px;
         cursor: pointer;
     }
     
