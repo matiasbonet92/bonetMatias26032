@@ -80,3 +80,40 @@ body,html{
     font-size: 15px;
     align-items: center;
 }
+
+
+@media (max-width:600px){
+
+    .cuerpo{
+        width: 100%;
+        height: 80%;
+        background-color: whitesmoke;
+        box-sizing: border-box;
+        padding-left: 38%;
+        padding-top: 15%;
+    }
+    
+    .cuerpo label{
+        font-size: 25px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+    }
+    
+    .cuerpo input{
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    
+    .cuerpo button{
+        box-sizing: border-box;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+}

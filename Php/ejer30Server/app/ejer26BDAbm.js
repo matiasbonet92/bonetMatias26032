@@ -87,13 +87,6 @@ $("#cerrarAlta").click(function(){
 $("#cerrarModif").click(function(){
     document.getElementById('modalModificacion').className="modalDesModificacion";
     document.getElementById('contenedorBase').className="contActivoModificacion";
-    $("#codjugAlta").val("");
-    $("#nombreAlta").val("");
-    $("#nacAlta").val("");
-    $("#equipoAlta").empty();
-    $("#activoAlta").val("");
-    $("#edadAlta").val("");
-    $("#pdfAlta").val("");
 });
 
 $("#cerrarRespuesta").click(function(){
