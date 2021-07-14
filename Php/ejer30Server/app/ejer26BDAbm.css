@@ -851,7 +851,7 @@ div#modalRespuesta{
     div#modalAlta #pdfAlta{
         width: 300%;
         box-sizing: border-box;
-        margin-left: -55px;
+        margin-left: -50px;
     }
 
     div#modalAlta .formularioAlta form .formInternos #enviarAlta{
@@ -859,7 +859,7 @@ div#modalRespuesta{
         height: 30px;
         box-sizing: border-box;
         margin-left: -60px;
-        margin-top: 80px;
+        margin-top: 60px;
         cursor: pointer;
     }
 

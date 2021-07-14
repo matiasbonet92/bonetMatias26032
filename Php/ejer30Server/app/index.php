@@ -85,7 +85,7 @@
         <div class="formularioAlta">
             <form id="formAlta" method="post" enctype="multipart/form-data">
                 <div class="formInternos">
-                    <label for="codjug">Codigo Jugador:</label><br>
+                    <label for="codjug">Cod. Jugador:</label><br>
                     <input type="text" name="codjug" id="codjugAlta" required>
                 </div>
                 <div class="formInternos">
