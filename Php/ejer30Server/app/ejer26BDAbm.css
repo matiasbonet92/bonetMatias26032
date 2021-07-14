@@ -533,11 +533,6 @@ div#contenedorBase{
     pointer-events: auto;
 }
 
-div#contenedorBase.contenedorDesBase{
-    opacity: 0.3;
-    pointer-events: none;
-}
-
 div#modalModificacion{
     position: fixed;
     top: 20%;
@@ -545,6 +540,11 @@ div#modalModificacion{
     visibility: hidden;
     width: 60%;
     height: 60%;
+}
+
+div#contenedorBase.contenedorDesBase{
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 div#modalModificacion.modalModifActivo{
@@ -555,7 +555,7 @@ div#modalModificacion.modalDesModificacion{
     visibility: hidden;
 }
 
-div#modalModificacion.contActivoModificacion{
+div#contenedorBase.contActivoModificacion{
     opacity: 1;
     pointer-events: auto;
 }
