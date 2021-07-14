@@ -130,15 +130,15 @@
         <div class="formularioModificacion">
             <form id="formModificacion" method="post" enctype="multipart/form-data">
                 <div class="formInternos">
-                    <label for="codjug">Codigo Jugador:</label><br>
+                    <label for="codjug">Cod. Jugador:</label><br>
                     <input type="text" name="codjug" id="codjugModificacion" required>
                 </div>
                 <div class="formInternos">
-                    <label for="nombre">Nombre Completo:</label><br>
+                    <label for="nombre">Nombre:</label><br>
                     <input type="text" name="nombrejug" id="nombreModificacion" required>
                 </div>
                 <div class="formInternos">
-                    <label for="nac">Fecha de Nacimiento:</label><br>
+                    <label for="nac">F.Nacimiento:</label><br>
                     <input type="date" name="nacimiento" id="nacModificacion" required>
                 </div>
                 <div class="formInternos">
