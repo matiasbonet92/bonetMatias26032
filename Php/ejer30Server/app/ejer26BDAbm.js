@@ -322,7 +322,6 @@ function alta(){
         cache: false,
         data: data,
     });
-    cargaTabla();
 }
 
 //funcion baja
