@@ -89,11 +89,11 @@
                     <input type="text" name="codjug" id="codjugAlta" required>
                 </div>
                 <div class="formInternos">
-                    <label for="nombre">Nombre Completo:</label><br>
+                    <label for="nombre">Nombre Jugador:</label><br>
                     <input type="text" name="nombrejug" id="nombreAlta" required>
                 </div>
                 <div class="formInternos">
-                    <label for="nac">Fecha de Nacimiento:</label><br>
+                    <label for="nac">Fecha Nacimiento:</label><br>
                     <input type="date" name="nacimiento" id="nacAlta" required>
                 </div>
                 <div class="formInternos">
