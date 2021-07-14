@@ -177,8 +177,8 @@ function cargaTabla(){
                 mod.setAttribute("campo-dato", "modificacion");
                 mod.innerHTML = "<button id='change' style='cursor:pointer;'>Modi</button>";
                 mod.onclick=function(){
-                    $("#contenedorBase").addClass("contenedorDesBase");
-                    $("#modalModificacion").addClass("modalModifActivo");
+                    document.getElementById('contenedorBase').className="contenedorDesBase";
+                    document.getElementById('modalModificacion').className="modalModifActivo";
                     llenaEquiposModificacion();
                     CompletarFichaModificacion(valor.codjug);
                     $("#enviarModificacion").click(function(){

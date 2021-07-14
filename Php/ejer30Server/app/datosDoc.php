@@ -7,6 +7,7 @@
     }
 ?>
 <?php
+
     define("SERVER","bax2kqxnnk1s3idf8ngv-mysql.services.clever-cloud.com");
     define("USUARIO","ufjr1niricfjywxs");
     define("PASS","fWotIYy5meVgqF9mPrta");
