@@ -49,10 +49,9 @@ $(document).ready(function(){
 
 /////  CORROBORACIONES ON KEY UP ///////////
 
-//cod
+//codAlta
 $("#codjugAlta").keyup(function(){
     dato = $("#codjugAlta").val();
-    /*validacionKeyup($("#codjugAlta").val());*/
     console.log(dato);
     if ((dato != "")) {
         $("#enviarAlta").attr("disabled",false);
@@ -60,6 +59,19 @@ $("#codjugAlta").keyup(function(){
     }else{
         $("#enviarAlta").attr("disabled",true);
         $("#enviarAlta").css("opacity","0.5");
+    }
+});
+
+//codModi
+$("#codjugModificacion").keyup(function(){
+    dato = $("#codjugModificacion").val();
+    console.log(dato);
+    if ((dato != "")) {
+        $("#enviarModificacion").attr("disabled",false);
+        $("#enviarModificacion").css("opacity","1");
+    }else{
+        $("#enviarModificacion").attr("disabled",true);
+        $("#enviarModificacion").css("opacity","0.5");
     }
 });
 
@@ -81,8 +93,22 @@ $("#alta").click(function(){
 
 //envia alta
 $("#enviarAlta").click(function(){
-    alta();
-    cargaTabla();
+    
+    var objAjax = $.ajax({
+        type:"get",
+        url:"./consultaKeyPrimario.php",
+        data: { codjug: $("#codjugAlta").val() },
+        success: function(respuestaDelServer) {
+            console.log(respuestaDelServer);
+            ojbJson = JSON.parse(respuestaDelServer);
+            if ( ojbJson.cantRegistros != 0 ) {
+                alert("El codigo del Jugador ya existe en la base de datos! No se puesdn repetir, por favor escriba uno diferente.");
+            }else{
+                alta();
+                cargaTabla();
+            }
+        }
+    });
 });
 
 //cierra form alta
