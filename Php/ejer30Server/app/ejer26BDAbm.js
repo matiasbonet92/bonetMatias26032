@@ -282,18 +282,6 @@ function CompletarFichaModificacion(valor){
     });
 }
 
-//funcion de validacion keyup
-/*function validacionKeyup(dato){
-    console.log(dato);
-    if ((dato != "")) {
-        console.log("hola");
-        $("#enviarAlta").attr("disabled",false);
-        $("#enviarAlta").css("background-color","pink");
-    }else{
-        $("#enviarAlta").attr("disabled",true);
-    }
-}*/
-
 //funcion alta
 function alta(){
     var data = new FormData($("#formAlta")[0]);
@@ -340,7 +328,7 @@ function cargarPdf(codigo){
             console.log(respuestaDelServer);
             $("#modalRespuesta").css("visibility","visible");
             $("#bodyRespuesta").empty();
-            $("#bodyRespuesta").html("<iframe width='100%' height='100%' src='data:application/pdf;base64,"+objPdf.documentoPdf+"'></iframe>");
+            $("#bodyRespuesta").html("<iframe width='100%' height='110px' src='data:application/pdf;base64,"+objPdf.documentoPdf+"'></iframe>");
         }
     });
 }
