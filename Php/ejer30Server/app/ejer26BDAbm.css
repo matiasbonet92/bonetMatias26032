@@ -231,7 +231,7 @@ div#contenedorBase table thead tr th input{
     border-radius: 24px;
 }
 
-.cabeceraFormularioAlta{
+div#modalAlta .cabeceraFormularioAlta{
     margin: auto;
     height: 15%;
     background-color: teal;
@@ -239,7 +239,7 @@ div#contenedorBase table thead tr th input{
     border-top-right-radius: 20px;
 }
 
-.cabeceraFormularioAlta header{
+div#modalAlta .cabeceraFormularioAlta header{
     width: 94%;
     text-align: center;
     text-decoration: underline;
@@ -251,7 +251,7 @@ div#contenedorBase table thead tr th input{
     float: left;
 }
 
-.cabeceraFormularioAlta button{
+div#modalAlta .cabeceraFormularioAlta button{
     width: 6%;
     height: 100%;
     color: whitesmoke;
@@ -263,13 +263,21 @@ div#contenedorBase table thead tr th input{
     border-top-right-radius: 20px;
 }
 
-.formularioAlta form{
+div#modalAlta .formularioAlta form{
     margin: auto;
     height: 70%;
     background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
-.pieFormularioAlta{
+div#modalAlta .pieFormularioAlta{
     margin: auto;
     height: 15%;
     background-color: teal;
@@ -284,22 +292,11 @@ div#contenedorBase table thead tr th input{
     border-bottom-right-radius: 20px;
 }
 
-.formularioAlta form{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
 .formularioAlta form .formInternos{
     max-width: 100%;
     width: 30%;
     max-height: 100%;
-    height: 100px;
+    height: 95px;
 }
 
 .formularioAlta form .formInternos label{
@@ -324,6 +321,7 @@ div#contenedorBase table thead tr th input{
     margin-top: 30px;
     margin-left: 150px;
     cursor: pointer;
+    opacity: 0.5;
 }
 
 

@@ -36,21 +36,35 @@ $(document).ready(function(){
         cargaTabla();
     });
 
-    //Corroboracion on keyup
-    $("#codjugAlta").keyup(function(){
-        validacionKeyup();
-    });
-
     //cierro sesion
     $("#btCierraSesion").click(function() {
         location.href='../destruirSesion.php';
     });
+
+    //carga tabla
+    $("#cargarDatos").click(function(){
+        cargaTabla();
+    });
 });
 
-//carga tabla
-$("#cargarDatos").click(function(){
-    cargaTabla();
+/////  CORROBORACIONES ON KEY UP ///////////
+
+//cod
+$("#codjugAlta").keyup(function(){
+    dato = $("#codjugAlta").val();
+    /*validacionKeyup($("#codjugAlta").val());*/
+    console.log(dato);
+    if ((dato != "")) {
+        $("#enviarAlta").attr("disabled",false);
+        $("#enviarAlta").css("opacity","1");
+    }else{
+        $("#enviarAlta").attr("disabled",true);
+        $("#enviarAlta").css("opacity","0.5");
+    }
 });
+
+///////////////////////////////////////////////////
+
 
 //vacia tabla
 $("#vaciar").click(function(){
@@ -82,6 +96,8 @@ $("#cerrarAlta").click(function(){
     $("#activoAlta").val("");
     $("#edadAlta").val("");
     $("#pdfAlta").val("");
+    $("#enviarAlta").css("opacity","0.5");
+    $("#enviarAlta").attr("disabled",true);
 });
 
 $("#cerrarModif").click(function(){
@@ -267,13 +283,16 @@ function CompletarFichaModificacion(valor){
 }
 
 //funcion de validacion keyup
-function validacionKeyup(){
-    if ((objCodArt.checkValidity() == true)) {
+/*function validacionKeyup(dato){
+    console.log(dato);
+    if ((dato != "")) {
+        console.log("hola");
         $("#enviarAlta").attr("disabled",false);
+        $("#enviarAlta").css("background-color","pink");
     }else{
         $("#enviarAlta").attr("disabled",true);
     }
-}
+}*/
 
 //funcion alta
 function alta(){
