@@ -26,21 +26,17 @@
     $activo = $_POST['activo'];
     $edad = $_POST['edad'];
 
-    $sql = "insert into tabla_jugadores (codjug,nombre,fecha_nacimiento,equipo,activo,edad,pdf) values (?,?,?,?,?,?,?)";
+    $sql = "insert into tabla_jugadores (codjug,nombre,fecha_nacimiento,equipo,activo,edad,pdf) values (?,?,?,?,?,?,?);";
 
     $respuesta = "";
 
     //creo variables con los datos
-    if ( ! isset($_FILES['pdf'] )) {
-        $respuesta = $respuesta . "<br/> No esta inicializada la variable:";
-    }else{
-        if ( empty($_FILES['pdf']['name']) ) {
+    if ( empty($_FILES['pdf']['name']) ) {
             $respuesta = $respuesta . "<br/> No ha sido ningun archivo para enviar!";
-        }else{
+    }else{
             $respuesta = $respuesta . "<br/> Trae PDF asociado a codJug:" . $codjug;
             $respuesta = $respuesta . "<br/> Nombre original del archivo subido:" . $_FILES['pdf']['name'];
             $contenidoPdf = file_get_contents($_FILES['pdf']['tmp_name']);
-        }
     }
 
     if ( ! ($sentencia = $mysqli->prepare($sql)) ) {

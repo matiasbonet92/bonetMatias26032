@@ -102,7 +102,7 @@ $("#enviarAlta").click(function(){
             console.log(respuestaDelServer);
             ojbJson = JSON.parse(respuestaDelServer);
             if ( ojbJson.cantRegistros != 0 ) {
-                alert("El codigo del Jugador ya existe en la base de datos! No se puesdn repetir, por favor escriba uno diferente.");
+                alert("El codigo del Jugador ya existe en la base de datos! No se pueden repetir, por favor escriba uno diferente.");
             }else{
                 alta();
                 cargaTabla();
@@ -232,7 +232,7 @@ function cargaTabla(){
 
 //funcion modificacion
 function modificacion(){
-    var data = new FormData($("#formModificacion")[0]);
+    var dataModi = new FormData($("#formModificacion")[0]);
 
     var objAjax = $.ajax({
         type: 'post',
@@ -242,7 +242,7 @@ function modificacion(){
         processData: false,
         contentType: false,
         cache: false,
-        data: data,
+        data: dataModi,
     });
 }
 
@@ -310,7 +310,7 @@ function CompletarFichaModificacion(valor){
 
 //funcion alta
 function alta(){
-    var data = new FormData($("#formAlta")[0]);
+    var dataAlta = new FormData($("#formAlta")[0]);
 
     var objAjax = $.ajax({
         type: 'post',
@@ -320,7 +320,7 @@ function alta(){
         processData: false,
         contentType: false,
         cache: false,
-        data: data,
+        data: dataAlta,
     });
 }
 
