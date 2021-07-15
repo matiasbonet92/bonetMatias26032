@@ -35,7 +35,7 @@
             $contenidoPdf = file_get_contents($_FILES['pdf']['tmp_name']);
     }
 
-    $sql = "update tabla_jugadores set codjug=?,nombre=?,fecha_nacimiento=?,equipo=?,activo=?,edad=?,pdf=? where codjug=?;";
+    $sql = "update tabla_jugadores set codjug=?,nombre=?,fecha_nacimiento=?,equipo=?,activo=?,edad=?,pdf=? where codjug=?";
     
     $respuesta = "";
 
