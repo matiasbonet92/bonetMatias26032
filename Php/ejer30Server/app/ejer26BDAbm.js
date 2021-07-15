@@ -36,15 +36,16 @@ $(document).ready(function(){
         cargaTabla();
     });
 
-    //cierro sesion
-    $("#btCierraSesion").click(function() {
-        location.href='../destruirSesion.php';
-    });
+});
 
-    //carga tabla
-    $("#cargarDatos").click(function(){
-        cargaTabla();
-    });
+//cierro sesion
+$("#btCierraSesion").click(function() {
+    location.href='../destruirSesion.php';
+});
+
+//carga tabla
+$("#cargarDatos").click(function(){
+    cargaTabla();
 });
 
 /////  CORROBORACIONES ON KEY UP ///////////
