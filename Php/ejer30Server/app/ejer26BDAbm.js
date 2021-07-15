@@ -111,6 +111,9 @@ $("#enviarAlta").click(function(){
     });
 });
 
+
+////// CIERRES DE BOTONES //////////////////////
+
 //cierra form alta
 $("#cerrarAlta").click(function(){
     document.getElementById('modalAlta').className="modalDesactivo";
@@ -126,14 +129,18 @@ $("#cerrarAlta").click(function(){
     $("#enviarAlta").attr("disabled",true);
 });
 
+//cierra form modi
 $("#cerrarModif").click(function(){
     document.getElementById('modalModificacion').className="modalDesModificacion";
     document.getElementById('contenedorBase').className="contActivoModificacion";
 });
 
+//cierra form respuesta
 $("#cerrarRespuesta").click(function(){
     $("#modalRespuesta").css("visibility","hidden");
 });
+
+////////////////////////////////////////////////////////////////////////////////////////
 
 
 //funcion de carga de tabla
@@ -230,22 +237,6 @@ function cargaTabla(){
     });
 }
 
-//funcion modificacion
-function modificacion(){
-    var dataModi = new FormData($("#formModificacion")[0]);
-
-    var objAjax = $.ajax({
-        type: 'post',
-        method: 'post',
-        enctype: 'multipart/form-data',
-        url:"./modificacion.php",
-        processData: false,
-        contentType: false,
-        cache: false,
-        data: dataModi,
-    });
-}
-
 //funcion para llenar con los equipos el alta
 function llenaEquiposAlta(){
     var objEquipos = $.ajax({
@@ -321,6 +312,22 @@ function alta(){
         contentType: false,
         cache: false,
         data: dataAlta,
+    });
+}
+
+//funcion modificacion
+function modificacion(){
+    var dataModi = new FormData($("#formModificacion")[0]);
+
+    var objAjax = $.ajax({
+        type: 'post',
+        method: 'post',
+        enctype: 'multipart/form-data',
+        url: "./modificacion.php",
+        processData: false,
+        contentType: false,
+        cache: false,
+        data: dataModi,
     });
 }
 
