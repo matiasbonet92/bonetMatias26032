@@ -26,6 +26,10 @@
     $activo = $_POST['activo'];
     $edad = $_POST['edad'];
 
+    $sql = "update tabla_jugadores set codjug=?,nombre=?,fecha_nacimiento=?,equipo=?,activo=?,edad=?,pdf=? where codjug=?";
+    
+    $respuesta = "";
+
     //creo variables con los datos
     if ( empty($_FILES['pdf']['name']) ) {
             $respuesta = $respuesta . "<br/> No ha sido ningun archivo para enviar!";
@@ -34,10 +38,6 @@
             $respuesta = $respuesta . "<br/> Nombre original del archivo subido:" . $_FILES['pdf']['name'];
             $contenidoPdf = file_get_contents($_FILES['pdf']['tmp_name']);
     }
-
-    $sql = "update tabla_jugadores set codjug=?,nombre=?,fecha_nacimiento=?,equipo=?,activo=?,edad=?,pdf=? where codjug=?";
-    
-    $respuesta = "";
 
     if ( ! ($sentencia = $mysqli->prepare($sql)) ) {
         $respuesta = $respuesta . "<br/> Fallo la preparacion del Template: ('. $mysqli->errno .') " . $mysqli->error;
