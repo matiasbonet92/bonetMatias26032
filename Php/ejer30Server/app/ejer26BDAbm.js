@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
     //objetos para trabajar
     objCodArt = document.getElementById('codjugAlta');
     objNombre = document.getElementById('nombreAlta');
@@ -33,7 +33,7 @@ $(document).ready(function(){
         $("#orden").val("edad");
         cargaTabla();
     });
-});
+
 
 //cierro sesion
 $("#btCierraSesion").click(function() {
@@ -107,6 +107,11 @@ $("#enviarAlta").click(function(){
             }
         }
     });
+});
+
+$("#enviarModificacion").click(function(){
+    modificacion();
+    cargaTabla();
 });
 
 
@@ -231,11 +236,6 @@ function cargaTabla(){
     });
 }
 
-$("#enviarModificacion").click(function(){
-    modificacion();
-    cargaTabla();
-});
-
 //funcion para llenar con los equipos el alta
 function llenaEquiposAlta(){
     var objEquipos = $.ajax({
@@ -326,7 +326,7 @@ function modificacion(){
         processData: false,
         contentType: false,
         cache: false,
-        data: dataModi,
+        data: { dataModi },
     });
 }
 
