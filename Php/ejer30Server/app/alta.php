@@ -1,14 +1,13 @@
 <?php
+
     session_start();
 
     if(!isset($_SESSION['usuario'])) {
         header('location:../login.html');
         exit();
     }
-?>
-<?php
 
-    sleep(4);
+    sleep(6);
 
     define("SERVER","bax2kqxnnk1s3idf8ngv-mysql.services.clever-cloud.com");
     define("USUARIO","ufjr1niricfjywxs");
@@ -26,7 +25,7 @@
     $activo = $_POST['activo'];
     $edad = $_POST['edad'];
 
-    $sql = "insert into tabla_jugadores (codjug,nombre,fecha_nacimiento,equipo,activo,edad,pdf) values (?,?,?,?,?,?,?);";
+    $sql = "insert into tabla_jugadores (codjug,nombre,fecha_nacimiento,equipo,activo,edad,pdf) values (?,?,?,?,?,?,?)";
 
     $respuesta = "";
 
