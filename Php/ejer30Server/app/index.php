@@ -128,7 +128,7 @@
             <button id="cerrarModif">X</button>
         </div>
         <div class="formularioModificacion">
-            <form id="formModi" method="post" enctype="multipart/form-data">
+            <form id="formModificacion" method="post" enctype="multipart/form-data">
                 <div class="formInternos">
                     <label for="codjug">Cod. Jugador:</label><br>
                     <input type="text" name="codjug" id="codjugModificacion" required>
