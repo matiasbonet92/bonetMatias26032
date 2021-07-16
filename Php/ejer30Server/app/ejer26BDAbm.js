@@ -5,8 +5,6 @@ $(document).ready(function(){
     $("#enviarAlta").attr("disabled",true);
     $("#modalRespuesta").css("visibility","hidden");
 
-    
-
     //dato inicial de orden
     $("#orden").val("nombre");
     
@@ -35,7 +33,6 @@ $(document).ready(function(){
         $("#orden").val("edad");
         cargaTabla();
     });
-
 });
 
 //cierro sesion
@@ -215,10 +212,6 @@ function cargaTabla(){
                     document.getElementById('modalModificacion').className="modalModifActivo";
                     llenaEquiposModificacion();
                     CompletarFichaModificacion(valor.codjug);
-                    $("#enviarModificacion").click(function(){
-                        modificacion();
-                        cargaTabla();
-                    });
                 }
                 objTr.appendChild(mod);
                 //creo Elim boton y agrego a la fila
@@ -237,6 +230,11 @@ function cargaTabla(){
         }
     });
 }
+
+$("#enviarModificacion").click(function(){
+    modificacion();
+    cargaTabla();
+});
 
 //funcion para llenar con los equipos el alta
 function llenaEquiposAlta(){
