@@ -56,5 +56,5 @@
         }
     }
 
-    $mysqli->close($mysqli);
+    $mysqli->close();
 ?>
