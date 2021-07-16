@@ -110,7 +110,7 @@
                 </div>
                 <div class="formInternos">
                     <label for="pdf">PDF:</label><br>
-                    <input type="file" name="pdf" id="pdfAlta" required>
+                    <input type="file" name="pdf" id="pdfAlta" >
                 </div>
                 <div class="formInternos">
                     <input type="submit" name="" id="enviarAlta" value="Enviar">
@@ -128,7 +128,7 @@
             <button id="cerrarModif">X</button>
         </div>
         <div class="formularioModificacion">
-            <form id="formModificacion" method="post" enctype="multipart/form-data">
+            <form id="formModi" method="post" enctype="multipart/form-data">
                 <div class="formInternos">
                     <label for="codjug">Cod. Jugador:</label><br>
                     <input type="text" name="codjug" id="codjugModificacion" required>
@@ -155,7 +155,7 @@
                 </div>
                 <div class="formInternos">
                     <label for="pdf">PDF:</label><br>
-                    <input type="file" name="pdf" id="pdfModificacion" required>
+                    <input type="file" name="pdf" id="pdfModificacion">
                 </div>
                 <div class="formInternos">
                     <input type="submit" name="" id="enviarModificacion" value="Enviar">

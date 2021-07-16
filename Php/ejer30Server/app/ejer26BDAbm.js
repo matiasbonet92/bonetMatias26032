@@ -316,7 +316,7 @@ function alta(){
 
 //funcion modificacion
 function modificacion(){
-    var dataModi = new FormData($("#formModificacion")[0]);
+    var dataModi = new FormData($("#formModi")[0]);
 
     var objAjax = $.ajax({
         type: 'post',
@@ -326,7 +326,7 @@ function modificacion(){
         processData: false,
         contentType: false,
         cache: false,
-        data: { dataModi },
+        data: dataModi,
     });
 }
 
