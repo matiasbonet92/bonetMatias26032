@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
     //objetos para trabajar
     objCodArt = document.getElementById('codjugAlta');
     objNombre = document.getElementById('nombreAlta');
@@ -33,7 +33,7 @@
         $("#orden").val("edad");
         cargaTabla();
     });
-
+});
 
 //cierro sesion
 $("#btCierraSesion").click(function() {

@@ -15,7 +15,7 @@
     define("PASS","fWotIYy5meVgqF9mPrta");
     define("BASE","bax2kqxnnk1s3idf8ngv");
 
-    //apertura de conexion con la base de datos para datos que no son blob
+    //apertura de conexion con la base de datos para datos 
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
 
     //creo variables con los datos
