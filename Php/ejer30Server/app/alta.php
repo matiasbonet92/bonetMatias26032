@@ -19,23 +19,24 @@
     $mysqli = new mysqli(SERVER,USUARIO,PASS,BASE);
 
     //creo variables con los datos
-    $codjug = $_POST['codAlta'];
-    $nombre = $_POST['nombreAlta'];
-    $fnac = $_POST['nacAlta'];
-    $equipo = $_POST['equipoAlta'];
-    $activo = $_POST['activoAlta'];
-    $edad = $_POST['edadAlta'];
+    $codjug = $_POST['codjug'];
+    $nombre = $_POST['nombrejug'];
+    $fnac = $_POST['nacimiento'];
+    $equipo = $_POST['equipo'];
+    $activo = $_POST['activo'];
+    $edad = $_POST['edad'];
 
     $sql = "insert into tabla_jugadores (codjug,nombre,fecha_nacimiento,equipo,activo,edad,pdf) values (?,?,?,?,?,?,?);";
 
     $respuesta = "";
 
     //creo variables con los datos
-    if ( empty($_FILES['pdfAlta']['name']) ) {
+    if ( empty($_FILES['pdf']['name']) ) {
             $respuesta = $respuesta . "<br/> No ha sido ningun archivo para enviar!";
     }else{
             $respuesta = $respuesta . "<br/> Trae PDF asociado a codJug:" . $codjug;
-            $contenidoPdf = file_get_contents($_FILES['pdfAlta']['tmp_name']);
+            $respuesta = $respuesta . "<br/> Nombre original del archivo subido:" . $_FILES['pdf']['name'];
+            $contenidoPdf = file_get_contents($_FILES['pdf']['tmp_name']);
     }
 
     if ( ! ($sentencia = $mysqli->prepare($sql)) ) {

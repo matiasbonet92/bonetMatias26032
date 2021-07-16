@@ -86,31 +86,31 @@
             <form id="formAlta" method="post" enctype="multipart/form-data">
                 <div class="formInternos">
                     <label for="codjug">Cod. Jugador:</label><br>
-                    <input type="text" name="codAlta" id="codjugAlta" required>
+                    <input type="text" name="codjug" id="codjugAlta" required>
                 </div>
                 <div class="formInternos">
                     <label for="nombre">Nombre:</label><br>
-                    <input type="text" name="nombreAlta" id="nombreAlta" required>
+                    <input type="text" name="nombrejug" id="nombreAlta" required>
                 </div>
                 <div class="formInternos">
                     <label for="nac">F.Nacimiento:</label><br>
-                    <input type="date" name="nacAlta" id="nacAlta" required>
+                    <input type="date" name="nacimiento" id="nacAlta" required>
                 </div>
                 <div class="formInternos">
                     <label for="equipo">Equipo:</label><br>
-                    <select name="equipoAlta" id="equipoAlta" required></select>
+                    <select name="equipo" id="equipoAlta" required></select>
                 </div>
                 <div class="formInternos">
                     <label for="activo">Activo:</label><br>
-                    <input type="text" name="activoAlta" id="activoAlta" placeholder="SI / NO" required>
+                    <input type="text" name="activo" id="activoAlta" placeholder="SI / NO" required>
                 </div>
                 <div class="formInternos">
                     <label for="edad">Edad:</label><br>
-                    <input type="number" min="18" name="edadAlta" id="edadAlta" required>
+                    <input type="number" min="18" name="edad" id="edadAlta" required>
                 </div>
                 <div class="formInternos">
                     <label for="pdf">PDF:</label><br>
-                    <input type="file" name="pdfAlta" id="pdfAlta" >
+                    <input type="file" name="pdf" id="pdfAlta" >
                 </div>
                 <div class="formInternos">
                     <input type="submit" name="" id="enviarAlta" value="Enviar">
@@ -131,31 +131,31 @@
             <form id="formModificacion" method="post" enctype="multipart/form-data">
                 <div class="formInternos">
                     <label for="codjug">Cod. Jugador:</label><br>
-                    <input type="text" name="codModi" id="codjugModificacion" required>
+                    <input type="text" name="codjug" id="codjugModificacion" required>
                 </div>
                 <div class="formInternos">
                     <label for="nombre">Nombre:</label><br>
-                    <input type="text" name="nombreModi" id="nombreModificacion" required>
+                    <input type="text" name="nombrejug" id="nombreModificacion" required>
                 </div>
                 <div class="formInternos">
                     <label for="nac">F.Nacimiento:</label><br>
-                    <input type="date" name="nacModi" id="nacModificacion" required>
+                    <input type="date" name="nacimiento" id="nacModificacion" required>
                 </div>
                 <div class="formInternos">
                     <label for="equipo">Equipo:</label><br>
-                    <select name="equipoModi" id="equipoModificacion" required></select>
+                    <select name="equipo" id="equipoModificacion" required></select>
                 </div>
                 <div class="formInternos">
                     <label for="activo">Activo:</label><br>
-                    <input type="text" name="activoModi" id="activoModificacion" placeholder="SI / NO" required>
+                    <input type="text" name="activo" id="activoModificacion" placeholder="SI / NO" required>
                 </div>
                 <div class="formInternos">
                     <label for="edad">Edad:</label><br>
-                    <input type="number" min="18" name="edadModi" id="edadModificacion" required>
+                    <input type="number" min="18" name="edad" id="edadModificacion" required>
                 </div>
                 <div class="formInternos">
                     <label for="pdf">PDF:</label><br>
-                    <input type="file" name="pdfModi" id="pdfModificacion">
+                    <input type="file" name="pdf" id="pdfModificacion">
                 </div>
                 <div class="formInternos">
                     <input type="submit" name="" id="enviarModificacion" value="Enviar">
